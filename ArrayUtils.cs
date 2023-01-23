@@ -266,10 +266,13 @@
 
 
         //sum
-        public int Sum(int[] nums) {
-            if (nums.Length > 0) {
+        public int Sum(int[] nums)
+        {
+            if (nums.Length > 0)
+            {
                 int x = 0;
-                foreach (int i in nums) {
+                foreach (int i in nums)
+                {
                     x += i;
                 }
                 return x;
@@ -278,10 +281,13 @@
             else throw new Exception();
         }
 
-        public float Sum(float[] nums) {
-            if (nums.Length > 0) {
+        public float Sum(float[] nums)
+        {
+            if (nums.Length > 0)
+            {
                 float x = 0;
-                foreach (float i in nums) {
+                foreach (float i in nums)
+                {
                     x += i;
                 }
                 return x;
@@ -290,10 +296,13 @@
             else throw new Exception();
         }
 
-        public double Sum(double[] nums) {
-            if (nums.Length > 0) {
+        public double Sum(double[] nums)
+        {
+            if (nums.Length > 0)
+            {
                 double x = 0;
-                foreach (double i in nums) {
+                foreach (double i in nums)
+                {
                     x += i;
                 }
                 return x;
@@ -302,10 +311,13 @@
             else throw new Exception();
         }
 
-        public decimal Sum(decimal[] nums) {
-            if (nums.Length > 0) {
+        public decimal Sum(decimal[] nums)
+        {
+            if (nums.Length > 0)
+            {
                 decimal x = 0;
-                foreach (decimal i in nums) {
+                foreach (decimal i in nums)
+                {
                     x += i;
                 }
                 return x;
@@ -316,10 +328,13 @@
 
 
         //product
-        public int Product(int[] nums) {
-            if (nums.Length > 0) {
+        public int Product(int[] nums)
+        {
+            if (nums.Length > 0)
+            {
                 int x = 1;
-                foreach (int i in nums) {
+                foreach (int i in nums)
+                {
                     x *= i;
                 }
                 return x;
@@ -328,10 +343,13 @@
             else throw new Exception();
         }
 
-        public float Product(float[] nums) {
-            if (nums.Length > 0) {
+        public float Product(float[] nums)
+        {
+            if (nums.Length > 0)
+            {
                 float x = 1;
-                foreach (float i in nums) {
+                foreach (float i in nums)
+                {
                     x *= i;
                 }
                 return x;
@@ -340,10 +358,13 @@
             else throw new Exception();
         }
 
-        public double Product(double[] nums) {
-            if (nums.Length > 0) {
+        public double Product(double[] nums)
+        {
+            if (nums.Length > 0)
+            {
                 double x = 1;
-                foreach (double i in nums) {
+                foreach (double i in nums)
+                {
                     x *= i;
                 }
                 return x;
@@ -352,13 +373,86 @@
             else throw new Exception();
         }
 
-        public decimal Product(decimal[] nums) {
-            if (nums.Length > 0) {
+        public decimal Product(decimal[] nums)
+        {
+            if (nums.Length > 0)
+            {
                 decimal x = 1;
-                foreach (decimal i in nums) {
+                foreach (decimal i in nums)
+                {
                     x *= i;
                 }
                 return x;
+            }
+
+            else throw new Exception();
+        }
+
+
+        //reverse
+        public int[] Reverse(int[] nums)
+        {
+            if (nums.Length > 0)
+            {
+                int[] nums2 = new int[nums.Length];
+                int x = 0;
+                for (int i = nums.Length; i > 0; i--) {
+                    nums2[x] = nums[i]; 
+                    x++;
+                }
+
+                return nums2;
+            }
+
+            else throw new Exception();
+        }
+
+        public float[] Reverse(float[] nums)
+        {
+            if (nums.Length > 0)
+            {
+                float[] nums2 = new float[nums.Length];
+                int x = 0;
+                for (int i = nums.Length; i > 0; i--) {
+                    nums2[x] = nums[i]; 
+                    x++;
+                }
+
+                return nums2;
+            }
+
+            else throw new Exception();
+        }
+
+        public double[] Reverse(double[] nums)
+        {
+            if (nums.Length > 0)
+            {
+                double[] nums2 = new double[nums.Length];
+                int x = 0;
+                for (int i = nums.Length; i > 0; i--) {
+                    nums2[x] = nums[i]; 
+                    x++;
+                }
+
+                return nums2;
+            }
+
+            else throw new Exception();
+        }
+
+        public decimal[] Reverse(decimal[] nums)
+        {
+            if (nums.Length > 0)
+            {
+                decimal[] nums2 = new decimal[nums.Length];
+                int x = 0;
+                for (int i = nums.Length; i > 0; i--) {
+                    nums2[x] = nums[i]; 
+                    x++;
+                }
+
+                return nums2;
             }
 
             else throw new Exception();
