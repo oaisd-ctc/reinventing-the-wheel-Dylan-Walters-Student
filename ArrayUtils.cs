@@ -507,8 +507,8 @@
             if (nums.Length > 0)
             {
                 if (nums.Length % 2 == 1)
-                { 
-                    return nums[nums.Length / 2 - 1]; 
+                {
+                    return nums[nums.Length / 2 - 1];
                 }
                 else
                 {
@@ -526,8 +526,8 @@
             if (nums.Length > 0)
             {
                 if (nums.Length % 2 == 1)
-                { 
-                    return nums[nums.Length / 2 - 1]; 
+                {
+                    return nums[nums.Length / 2 - 1];
                 }
                 else
                 {
@@ -545,8 +545,8 @@
             if (nums.Length > 0)
             {
                 if (nums.Length % 2 == 1)
-                { 
-                    return nums[nums.Length / 2 - 1]; 
+                {
+                    return nums[nums.Length / 2 - 1];
                 }
                 else
                 {
@@ -557,6 +557,88 @@
             }
 
             else throw new Exception();
+        }
+
+        public int Mode(int[] nums) {  // AFAIK i'm not allowed to use dictionaries, given that they're defined in System.Collections.Generic. That's not gonna stop me.
+            int[] values = new int[0];
+            int[] counts = new int[0];
+
+        }
+
+
+        //append
+        public int[] Append(int[] x, int y)
+        {
+            int[] z = new int[x.Length + 1];
+            z[x.Length] = y;
+
+            return z;
+        }
+
+        public float[] Append(float[] x, float y)
+        {
+            float[] z = new float[x.Length + 1];
+            z[x.Length] = y;
+
+            return z;
+        }
+
+        public double[] Append(double[] x, double y)
+        {
+            double[] z = new double[x.Length + 1];
+            z[x.Length] = y;
+
+            return z;
+        }
+
+        public decimal[] Append(decimal[] x, decimal y)
+        {
+            decimal[] z = new decimal[x.Length + 1];
+            z[x.Length] = y;
+
+            return z;
+        }
+
+
+        //contains
+        public bool Contains(int[]x, int y) {
+            foreach (int i in x) {
+                if (i == y) {
+                    return true; //return early to terminate the function
+                }
+            }
+
+            return false;
+        }
+
+        public bool Contains(float[]x, float y) {
+            foreach (float i in x) {
+                if (i == y) {
+                    return true; //return early to terminate the function
+                }
+            }
+
+            return false;
+        }
+
+        public bool Contains(double[]x, double y) {
+            foreach (double i in x) {
+                if (i == y) {
+                    return true; //return early to terminate the function
+                }
+            }
+
+            return false;
+        }
+
+        public bool Contains(decimal[]x, decimal y) {
+            foreach (decimal i in x) {
+                if (i == y) {
+                    return true; //return early to terminate the function
+                }
+            }
+
+            return false;
         }
 
     }
