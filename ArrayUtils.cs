@@ -6,58 +6,79 @@
         //average
         public double Average(int[] nums)
         {
-            double x = 0;
-
-            foreach (int i in nums)
+            if (nums.Length > 0) //empty arrays are cringe!!!
             {
-                x += i;
+                double x = 0;
+
+                foreach (int i in nums)
+                {
+                    x += i;
+                }
+
+                x /= nums.Length;
+
+                return x;
             }
 
-            x /= nums.Length;
-
-            return x;
+            else throw new Exception();
         }
 
         public float Average(float[] nums)
         {
-            float x = 0;
-
-            foreach (float i in nums)
+            if (nums.Length > 0)
             {
-                x += i;
+                float x = 0;
+
+                foreach (float i in nums)
+                {
+                    x += i;
+                }
+
+                x /= nums.Length;
+
+                return x;
             }
 
-            x /= nums.Length;
-
-            return x;
+            else throw new Exception();
         }
 
         public double Average(double[] nums)
         {
-            double x = 0;
-
-            foreach (double i in nums)
+            if (nums.Length > 0)
             {
-                x += i;
+                double x = 0;
+
+                foreach (double i in nums)
+                {
+                    x += i;
+                }
+
+                x /= nums.Length;
+
+                return x;
             }
 
-            x /= nums.Length;
-
-            return x;
+            else throw new Exception();
         }
 
         public decimal Average(decimal[] nums)
         {
-            decimal x = 0;
 
-            foreach (decimal i in nums)
+            if (nums.Length > 0)
             {
-                x += i;
+                decimal x = 0;
+
+                foreach (decimal i in nums)
+                {
+                    x += i;
+                }
+
+                x /= nums.Length;
+
+                return x;
             }
 
-            x /= nums.Length;
-
-            return x;
+            else throw new Exception();
         }
 
 
@@ -396,8 +417,9 @@
             {
                 int[] nums2 = new int[nums.Length];
                 int x = 0;
-                for (int i = nums.Length; i > 0; i--) {
-                    nums2[x] = nums[i]; 
+                for (int i = nums.Length; i > 0; i--)
+                { // iterate through the array in reverse
+                    nums2[x] = nums[i];
                     x++;
                 }
 
@@ -413,8 +435,9 @@
             {
                 float[] nums2 = new float[nums.Length];
                 int x = 0;
-                for (int i = nums.Length; i > 0; i--) {
-                    nums2[x] = nums[i]; 
+                for (int i = nums.Length; i > 0; i--)
+                {
+                    nums2[x] = nums[i];
                     x++;
                 }
 
@@ -430,8 +453,9 @@
             {
                 double[] nums2 = new double[nums.Length];
                 int x = 0;
-                for (int i = nums.Length; i > 0; i--) {
-                    nums2[x] = nums[i]; 
+                for (int i = nums.Length; i > 0; i--)
+                {
+                    nums2[x] = nums[i];
                     x++;
                 }
 
@@ -447,12 +471,89 @@
             {
                 decimal[] nums2 = new decimal[nums.Length];
                 int x = 0;
-                for (int i = nums.Length; i > 0; i--) {
-                    nums2[x] = nums[i]; 
+                for (int i = nums.Length; i > 0; i--)
+                {
+                    nums2[x] = nums[i];
                     x++;
                 }
 
                 return nums2;
+            }
+
+            else throw new Exception();
+        }
+
+        public double Median(int[] nums)
+        {
+            if (nums.Length > 0)
+            {
+                if (nums.Length % 2 == 1)  //if the array has an odd length...
+                {
+                    return nums[nums.Length / 2 - 1]; // just get the middle integer.
+                }
+                else //otherwise...
+                {
+                    double x = nums[nums.Length / 2]; //average the middle two numbers.
+                    double y = nums[nums.Length / 2 - 1];
+                    return (x + y / 2);
+                }
+            }
+
+            else throw new Exception();
+        }
+
+        public float Median(float[] nums)
+        {
+            if (nums.Length > 0)
+            {
+                if (nums.Length % 2 == 1)
+                { 
+                    return nums[nums.Length / 2 - 1]; 
+                }
+                else
+                {
+                    float x = nums[nums.Length / 2];
+                    float y = nums[nums.Length / 2 - 1];
+                    return (x + y / 2);
+                }
+            }
+
+            else throw new Exception();
+        }
+
+        public double Median(double[] nums)
+        {
+            if (nums.Length > 0)
+            {
+                if (nums.Length % 2 == 1)
+                { 
+                    return nums[nums.Length / 2 - 1]; 
+                }
+                else
+                {
+                    double x = nums[nums.Length / 2];
+                    double y = nums[nums.Length / 2 - 1];
+                    return (x + y / 2);
+                }
+            }
+
+            else throw new Exception();
+        }
+
+        public decimal Median(decimal[] nums)
+        {
+            if (nums.Length > 0)
+            {
+                if (nums.Length % 2 == 1)
+                { 
+                    return nums[nums.Length / 2 - 1]; 
+                }
+                else
+                {
+                    decimal x = nums[nums.Length / 2];
+                    decimal y = nums[nums.Length / 2 - 1];
+                    return (x + y / 2);
+                }
             }
 
             else throw new Exception();
