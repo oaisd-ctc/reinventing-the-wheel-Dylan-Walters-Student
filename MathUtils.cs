@@ -319,11 +319,11 @@ public class MathUtilities
     }
 
     // Binary function/ overrides.
-    public int Binary(int x)
-    {
-        if(x != 0)
-        {
-            
-        }
-    }
+    // public int Binary(int x)
+    // {
+    //     if(x != 0)
+    //     {
+
+    //     }
+    // }
 }     
