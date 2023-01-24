@@ -318,7 +318,7 @@ public static class MathUtilities
         return (value / total) * 100;
     }
 
-    // Binary function/ overloads
+    // Binary function has no overloads
     public static string Binary(int x)
     {
         string binary = "";
@@ -333,14 +333,6 @@ public static class MathUtilities
                 binary = $"1{binary}";
             }
         }
-        Console.WriteLine(binary);
-        return binary;
-    }
-
-    public static string Binary(double x)
-    {
-        string binary = "";
-
         return binary;
     }
 
