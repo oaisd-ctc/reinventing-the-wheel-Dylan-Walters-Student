@@ -1,10 +1,10 @@
 ﻿namespace ArrayUtils
 {
-    public class ArrayUtilities
+    public static class ArrayUtilities
     {
 
         //average
-        public double Average(int[] nums)
+        public static double Average(int[] nums)
         {
             if (nums.Length > 0) //empty arrays are cringe!!!
             {
@@ -23,7 +23,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public float Average(float[] nums)
+        public static float Average(float[] nums)
         {
             if (nums.Length > 0)
             {
@@ -42,7 +42,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public double Average(double[] nums)
+        public static double Average(double[] nums)
         {
             if (nums.Length > 0)
             {
@@ -61,7 +61,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public decimal Average(decimal[] nums)
+        public static decimal Average(decimal[] nums)
         {
 
             if (nums.Length > 0)
@@ -83,7 +83,7 @@
 
 
         //max
-        public int Max(int[] nums)
+        public static int Max(int[] nums)
         {
             if (nums.Length > 0)
             {
@@ -108,7 +108,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public float Max(float[] nums)
+        public static float Max(float[] nums)
         {
             if (nums.Length > 0)
             {
@@ -133,7 +133,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public double Max(double[] nums)
+        public static double Max(double[] nums)
         {
             if (nums.Length > 0)
             {
@@ -158,7 +158,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public decimal Max(decimal[] nums)
+        public static decimal Max(decimal[] nums)
         {
             if (nums.Length > 0)
             {
@@ -185,7 +185,7 @@
 
 
         //min
-        public int Min(int[] nums)
+        public static int Min(int[] nums)
         {
             if (nums.Length > 0)
             {
@@ -210,7 +210,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public float Min(float[] nums)
+        public static float Min(float[] nums)
         {
             if (nums.Length > 0)
             {
@@ -235,7 +235,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public double Min(double[] nums)
+        public static double Min(double[] nums)
         {
             if (nums.Length > 0)
             {
@@ -260,7 +260,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public decimal Min(decimal[] nums)
+        public static decimal Min(decimal[] nums)
         {
             if (nums.Length > 0)
             {
@@ -287,7 +287,7 @@
 
 
         //sum
-        public int Sum(int[] nums)
+        public static int Sum(int[] nums)
         {
             if (nums.Length > 0)
             {
@@ -302,7 +302,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public float Sum(float[] nums)
+        public static float Sum(float[] nums)
         {
             if (nums.Length > 0)
             {
@@ -317,7 +317,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public double Sum(double[] nums)
+        public static double Sum(double[] nums)
         {
             if (nums.Length > 0)
             {
@@ -332,7 +332,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public decimal Sum(decimal[] nums)
+        public static decimal Sum(decimal[] nums)
         {
             if (nums.Length > 0)
             {
@@ -349,7 +349,7 @@
 
 
         //product
-        public int Product(int[] nums)
+        public static int Product(int[] nums)
         {
             if (nums.Length > 0)
             {
@@ -364,7 +364,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public float Product(float[] nums)
+        public static float Product(float[] nums)
         {
             if (nums.Length > 0)
             {
@@ -379,7 +379,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public double Product(double[] nums)
+        public static double Product(double[] nums)
         {
             if (nums.Length > 0)
             {
@@ -394,7 +394,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public decimal Product(decimal[] nums)
+        public static decimal Product(decimal[] nums)
         {
             if (nums.Length > 0)
             {
@@ -411,7 +411,7 @@
 
 
         //reverse
-        public int[] Reverse(int[] nums)
+        public static int[] Reverse(int[] nums)
         {
             if (nums.Length > 0)
             {
@@ -429,7 +429,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public float[] Reverse(float[] nums)
+        public static float[] Reverse(float[] nums)
         {
             if (nums.Length > 0)
             {
@@ -447,7 +447,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public double[] Reverse(double[] nums)
+        public static double[] Reverse(double[] nums)
         {
             if (nums.Length > 0)
             {
@@ -465,7 +465,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public decimal[] Reverse(decimal[] nums)
+        public static decimal[] Reverse(decimal[] nums)
         {
             if (nums.Length > 0)
             {
@@ -483,7 +483,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public double Median(int[] nums)
+        public static double Median(int[] nums)
         {
             if (nums.Length > 0)
             {
@@ -502,7 +502,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public float Median(float[] nums)
+        public static float Median(float[] nums)
         {
             if (nums.Length > 0)
             {
@@ -521,7 +521,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public double Median(double[] nums)
+        public static double Median(double[] nums)
         {
             if (nums.Length > 0)
             {
@@ -540,7 +540,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public decimal Median(decimal[] nums)
+        public static decimal Median(decimal[] nums)
         {
             if (nums.Length > 0)
             {
@@ -559,7 +559,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public int Mode(int[] nums)  // AFAIK i'm not allowed to use dictionaries, given that they're defined in System.Collections.Generic. That's not gonna stop me.
+        public static int Mode(int[] nums)  // AFAIK i'm not allowed to use dictionaries, given that they're defined in System.Collections.Generic. That's not gonna stop me.
         {
             if (nums.Length > 0)
             {
@@ -589,7 +589,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public float Mode(float[] nums)
+        public static float Mode(float[] nums)
         {
             if (nums.Length > 0)
             {
@@ -618,7 +618,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public double Mode(double[] nums)
+        public static double Mode(double[] nums)
         {
             if (nums.Length > 0)
             {
@@ -648,7 +648,7 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public decimal Mode(decimal[] nums)
+        public static decimal Mode(decimal[] nums)
         {
             if (nums.Length > 0) {
                 decimal[] values = new decimal[0];
@@ -677,7 +677,7 @@
         }
 
         //append
-        public int[] Append(int[] x, int y)
+        public static int[] Append(int[] x, int y)
         {
             int[] z = new int[x.Length + 1];
             z[x.Length] = y;
@@ -685,7 +685,7 @@
             return z;
         }
 
-        public float[] Append(float[] x, float y)
+        public static float[] Append(float[] x, float y)
         {
             float[] z = new float[x.Length + 1];
             z[x.Length] = y;
@@ -693,7 +693,7 @@
             return z;
         }
 
-        public double[] Append(double[] x, double y)
+        public static double[] Append(double[] x, double y)
         {
             double[] z = new double[x.Length + 1];
             z[x.Length] = y;
@@ -701,7 +701,7 @@
             return z;
         }
 
-        public decimal[] Append(decimal[] x, decimal y)
+        public static decimal[] Append(decimal[] x, decimal y)
         {
             decimal[] z = new decimal[x.Length + 1];
             z[x.Length] = y;
@@ -711,7 +711,7 @@
 
 
         //contains
-        public bool Contains(int[] x, int y)
+        public static bool Contains(int[] x, int y)
         {
             foreach (int i in x)
             {
@@ -724,7 +724,7 @@
             return false;
         }
 
-        public bool Contains(float[] x, float y)
+        public static bool Contains(float[] x, float y)
         {
             foreach (float i in x)
             {
@@ -737,7 +737,7 @@
             return false;
         }
 
-        public bool Contains(double[] x, double y)
+        public static bool Contains(double[] x, double y)
         {
             foreach (double i in x)
             {
@@ -750,7 +750,7 @@
             return false;
         }
 
-        public bool Contains(decimal[] x, decimal y)
+        public static bool Contains(decimal[] x, decimal y)
         {
             foreach (decimal i in x)
             {
@@ -765,7 +765,7 @@
 
 
         // indexof
-        public int IndexOf(int[] x, int y)
+        public static int IndexOf(int[] x, int y)
         {
             if (Contains(x, y))
             {
@@ -781,7 +781,7 @@
             else return -1;
         }
 
-        public int IndexOf(float[] x, float y)
+        public static int IndexOf(float[] x, float y)
         {
             if (Contains(x, y))
             {
@@ -797,7 +797,7 @@
             else return -1;
         }
 
-        public int IndexOf(double[] x, double y)
+        public static int IndexOf(double[] x, double y)
         {
             if (Contains(x, y))
             {
@@ -813,7 +813,7 @@
             else return -1;
         }
 
-        public int IndexOf(decimal[] x, decimal y)
+        public static int IndexOf(decimal[] x, decimal y)
         {
             if (Contains(x, y))
             {
@@ -832,7 +832,7 @@
 
 
         // howmany
-        public int HowMany(int[] x, int y)
+        public static int HowMany(int[] x, int y)
         {
             int count = 0;
 
@@ -846,7 +846,7 @@
             return count;
         }
 
-        public int HowMany(float[] x, float y)
+        public static int HowMany(float[] x, float y)
         {
             int count = 0;
 
@@ -860,7 +860,7 @@
             return count;
         }
 
-        public int HowMany(double[] x, double y)
+        public static int HowMany(double[] x, double y)
         {
             int count = 0;
 
@@ -874,7 +874,7 @@
             return count;
         }
 
-        public int HowMany(decimal[] x, decimal y)
+        public static int HowMany(decimal[] x, decimal y)
         {
             int count = 0;
 
