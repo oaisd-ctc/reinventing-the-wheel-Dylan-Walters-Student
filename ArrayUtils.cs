@@ -20,7 +20,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public float Average(float[] nums)
@@ -39,7 +39,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public double Average(double[] nums)
@@ -58,7 +58,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public decimal Average(decimal[] nums)
@@ -78,7 +78,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
 
@@ -105,7 +105,7 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public float Max(float[] nums)
@@ -130,7 +130,7 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public double Max(double[] nums)
@@ -155,7 +155,7 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public decimal Max(decimal[] nums)
@@ -180,7 +180,7 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
 
@@ -207,7 +207,7 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public float Min(float[] nums)
@@ -232,7 +232,7 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public double Min(double[] nums)
@@ -257,7 +257,7 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public decimal Min(decimal[] nums)
@@ -282,7 +282,7 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
 
@@ -299,7 +299,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public float Sum(float[] nums)
@@ -314,7 +314,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public double Sum(double[] nums)
@@ -329,7 +329,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public decimal Sum(decimal[] nums)
@@ -344,7 +344,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
 
@@ -361,7 +361,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public float Product(float[] nums)
@@ -376,7 +376,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public double Product(double[] nums)
@@ -391,7 +391,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public decimal Product(decimal[] nums)
@@ -406,7 +406,7 @@
                 return x;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
 
@@ -426,7 +426,7 @@
                 return nums2;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public float[] Reverse(float[] nums)
@@ -444,7 +444,7 @@
                 return nums2;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public double[] Reverse(double[] nums)
@@ -462,7 +462,7 @@
                 return nums2;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public decimal[] Reverse(decimal[] nums)
@@ -480,7 +480,7 @@
                 return nums2;
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public double Median(int[] nums)
@@ -499,7 +499,7 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public float Median(float[] nums)
@@ -518,7 +518,7 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public double Median(double[] nums)
@@ -537,7 +537,7 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public decimal Median(decimal[] nums)
@@ -556,104 +556,124 @@
                 }
             }
 
-            else throw new Exception();
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         public int Mode(int[] nums)  // AFAIK i'm not allowed to use dictionaries, given that they're defined in System.Collections.Generic. That's not gonna stop me.
         {
-            int[] values = new int[0]; //list of unique values in the array
-            int[] counts = new int[0]; //corresponding array of their number of occurrences
-
-            foreach (int i in nums) //get entries of all of the numbers and their number of occurrences
+            if (nums.Length > 0)
             {
-                if (!Contains(values, i)) //if values doesn't have an entry for a number
+                int[] values = new int[0]; //list of unique values in the array
+                int[] counts = new int[0]; //corresponding array of their number of occurrences
+
+                foreach (int i in nums) //get entries of all of the numbers and their number of occurrences
                 {
-                    Append(values, i); //create one, and a corresponding entry in counts containing its occurrences
-                    Append(counts, HowMany(nums, i));
+                    if (!Contains(values, i)) //if values doesn't have an entry for a number
+                    {
+                        Append(values, i); //create one, and a corresponding entry in counts containing its occurrences
+                        Append(counts, HowMany(nums, i));
+                    }
                 }
+
+                int maxcount = Max(counts); //get the number of occurrences of the mode
+
+                if (HowMany(counts, maxcount) > 1) //if there is more than one number with that number of occurrences (no mode!)
+                {
+                    throw new Exception(); // cry like a little baby to indicate such
+                }
+
+                //otherwise, we know there's a mode!
+                return values[IndexOf(counts, maxcount)]; //return the corresponding value from the values array'
             }
 
-            int maxcount = Max(counts); //get the number of occurrences of the mode
-
-            if (HowMany(counts, maxcount) > 1) //if there is more than one number with that number of occurrences (no mode!)
-            { 
-                return -1; // return -1 to indicate such
-            }
-
-            //otherwise, we know there's a mode!
-            return values[IndexOf(counts, maxcount)]; //return the corresponding value from the values array
+            else throw new FormatException("Expected a non-empty array!");
         }
 
-        public float Mode(float[] nums) 
+        public float Mode(float[] nums)
         {
-            float[] values = new float[0];
-            int[] counts = new int[0];
-
-            foreach (int i in nums)
+            if (nums.Length > 0)
             {
-                if (!Contains(values, i))
+                float[] values = new float[0];
+                int[] counts = new int[0];
+
+                foreach (int i in nums)
                 {
-                    Append(values, i);
-                    Append(counts, HowMany(nums, i));
+                    if (!Contains(values, i))
+                    {
+                        Append(values, i);
+                        Append(counts, HowMany(nums, i));
+                    }
                 }
+
+                int maxcount = Max(counts);
+
+                if (HowMany(counts, maxcount) > 1)
+                {
+                    throw new Exception();
+                }
+
+                return values[IndexOf(counts, maxcount)];
             }
 
-            int maxcount = Max(counts);
-
-            if (HowMany(counts, maxcount) > 1)
-            { 
-                return -1;
-            }
-
-            return values[IndexOf(counts, maxcount)];
+            else throw new FormatException("Expected a non-empty array!");
         }
 
-        public double Mode(double[] nums) 
+        public double Mode(double[] nums)
         {
-            double[] values = new double[0];
-            int[] counts = new int[0];
-
-            foreach (int i in nums)
+            if (nums.Length > 0)
             {
-                if (!Contains(values, i))
+
+                double[] values = new double[0];
+                int[] counts = new int[0];
+
+                foreach (int i in nums)
                 {
-                    Append(values, i);
-                    Append(counts, HowMany(nums, i));
+                    if (!Contains(values, i))
+                    {
+                        Append(values, i);
+                        Append(counts, HowMany(nums, i));
+                    }
                 }
+
+                int maxcount = Max(counts);
+
+                if (HowMany(counts, maxcount) > 1)
+                {
+                    throw new Exception();
+                }
+
+                return values[IndexOf(counts, maxcount)];
             }
 
-            int maxcount = Max(counts);
-
-            if (HowMany(counts, maxcount) > 1)
-            { 
-                return -1;
-            }
-
-            return values[IndexOf(counts, maxcount)];
+            else throw new FormatException("Expected a non-empty array!");
         }
 
-        public decimal Mode(decimal[] nums) 
+        public decimal Mode(decimal[] nums)
         {
-            decimal[] values = new decimal[0];
-            int[] counts = new int[0];
+            if (nums.Length > 0) {
+                decimal[] values = new decimal[0];
+                int[] counts = new int[0];
 
-            foreach (int i in nums)
-            {
-                if (!Contains(values, i))
+                foreach (int i in nums)
                 {
-                    Append(values, i);
-                    Append(counts, HowMany(nums, i));
+                    if (!Contains(values, i))
+                    {
+                        Append(values, i);
+                        Append(counts, HowMany(nums, i));
+                    }
                 }
+
+                int maxcount = Max(counts);
+
+                if (HowMany(counts, maxcount) > 1)
+                {
+                    throw new ArithmeticException();
+                }
+
+                return values[IndexOf(counts, maxcount)];
             }
 
-            int maxcount = Max(counts);
-
-            if (HowMany(counts, maxcount) > 1)
-            { 
-                return -1;
-            }
-
-            return values[IndexOf(counts, maxcount)];
+            else throw new FormatException("Expected a non-empty array!");
         }
 
         //append
