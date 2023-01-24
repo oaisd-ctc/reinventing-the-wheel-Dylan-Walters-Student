@@ -483,6 +483,8 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
+
+        //median
         public static double Median(int[] nums)
         {
             if (nums.Length > 0)
@@ -559,6 +561,9 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
+
+
+        //mode
         public static int Mode(int[] nums)  // AFAIK i'm not allowed to use dictionaries, given that they're defined in System.Collections.Generic. That's not gonna stop me.
         {
             if (nums.Length > 0)
@@ -676,6 +681,19 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
+        public static int[] AddToAll(int[] x, int y) {
+            int temp = 0;
+            int[] z = new int[x.Length];
+
+            for (int i = 0; i < x.Length; i++) { //deep copy x to z
+                temp = x[i];
+                temp += y; //add the number
+                z[i] = temp;
+            }
+
+            return z;
+        }
+
         //append
         public static int[] Append(int[] x, int y)
         {
@@ -764,7 +782,7 @@
         }
 
 
-        // indexof
+        //indexof
         public static int IndexOf(int[] x, int y)
         {
             if (Contains(x, y))
@@ -831,7 +849,7 @@
 
 
 
-        // howmany
+        //howmany
         public static int HowMany(int[] x, int y)
         {
             int count = 0;
