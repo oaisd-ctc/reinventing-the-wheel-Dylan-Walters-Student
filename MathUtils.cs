@@ -1,40 +1,40 @@
 ﻿namespace MathUtils;
 
-public class MathUtilities
+public static class MathUtilities
 {
 
     // Raised to a power functions/ overloads
-    public int Power(int b, int e)
+    public static int Power(int b, int e)
     {
         int x = 1;
-        for(int i = 0; i < e; i++)
+        for (int i = 0; i < e; i++)
         {
             x *= b;
         }
         return x;
     }
-    public float Power(float b, float e)
+    public static float Power(float b, float e)
     {
         float x = 1;
-        for(int i = 0; i < e; i++)
+        for (int i = 0; i < e; i++)
         {
             x *= b;
         }
         return x;
     }
-    public double Power(double b, double e)
+    public static double Power(double b, double e)
     {
         double x = 1;
-        for(int i = 0; i < e; i++)
+        for (int i = 0; i < e; i++)
         {
             x *= b;
         }
         return x;
     }
-    public decimal Power(decimal b, decimal e)
+    public static decimal Power(decimal b, decimal e)
     {
         decimal x = 1;
-        for(int i = 0; i < e; i++)
+        for (int i = 0; i < e; i++)
         {
             x *= b;
         }
@@ -42,7 +42,7 @@ public class MathUtilities
     }
 
     // square root functions/ overloads
-    public double SquareRoot(int b)
+    public static double SquareRoot(int b)
     {
         double root = 1;
         int i = 0;
@@ -57,7 +57,7 @@ public class MathUtilities
         }
         return root;
     }
-    public double SquareRoot(double b)
+    public static double SquareRoot(double b)
     {
         double root = 1;
         int i = 0;
@@ -72,7 +72,7 @@ public class MathUtilities
         }
         return root;
     }
-        public double SquareRoot(float b)
+    public static double SquareRoot(float b)
     {
         double root = 1;
         int i = 0;
@@ -87,7 +87,7 @@ public class MathUtilities
         }
         return root;
     }
-        public decimal SquareRoot(decimal b)
+    public static decimal SquareRoot(decimal b)
     {
         decimal root = 1;
         int i = 0;
@@ -104,7 +104,7 @@ public class MathUtilities
     }
 
     // Absolute value functions/ overloads
-    public int AbsoluteValue(int x)
+    public static int AbsoluteValue(int x)
     {
         if (x < 0)
         {
@@ -112,7 +112,7 @@ public class MathUtilities
         }
         return x;
     }
-    public double AbsoluteValue(double x)
+    public static double AbsoluteValue(double x)
     {
         if (x < 0)
         {
@@ -120,7 +120,7 @@ public class MathUtilities
         }
         return x;
     }
-    public float AbsoluteValue(float x)
+    public static float AbsoluteValue(float x)
     {
         if (x < 0)
         {
@@ -128,7 +128,7 @@ public class MathUtilities
         }
         return x;
     }
-    public decimal AbsoluteValue(decimal x)
+    public static decimal AbsoluteValue(decimal x)
     {
         if (x < 0)
         {
@@ -137,10 +137,10 @@ public class MathUtilities
         return x;
     }
 
-    // min functions/ overides
-    public int Min(int x, int y)
+    // min functions/ overloads
+    public static int Min(int x, int y)
     {
-        if(x > y)
+        if (x > y)
         {
             return y;
         }
@@ -149,9 +149,9 @@ public class MathUtilities
             return x;
         }
     }
-        public double Min(double x, double y)
+    public static double Min(double x, double y)
     {
-        if(x > y)
+        if (x > y)
         {
             return y;
         }
@@ -160,9 +160,9 @@ public class MathUtilities
             return x;
         }
     }
-    public float Min(float x, float y)
+    public static float Min(float x, float y)
     {
-        if(x > y)
+        if (x > y)
         {
             return y;
         }
@@ -171,9 +171,9 @@ public class MathUtilities
             return x;
         }
     }
-    public decimal Min(decimal x, decimal y)
+    public static decimal Min(decimal x, decimal y)
     {
-        if(x > y)
+        if (x > y)
         {
             return y;
         }
@@ -182,10 +182,10 @@ public class MathUtilities
             return x;
         }
     }
-        // Max functions/ overides
-    public int Max(int x, int y)
+    // Max functions/ overloads
+    public static int Max(int x, int y)
     {
-        if(x > y)
+        if (x > y)
         {
             return y;
         }
@@ -194,9 +194,9 @@ public class MathUtilities
             return x;
         }
     }
-        public double Max(double x, double y)
+    public static double Max(double x, double y)
     {
-        if(x > y)
+        if (x > y)
         {
             return y;
         }
@@ -205,9 +205,9 @@ public class MathUtilities
             return x;
         }
     }
-    public float Max(float x, float y)
+    public static float Max(float x, float y)
     {
-        if(x > y)
+        if (x > y)
         {
             return y;
         }
@@ -216,9 +216,9 @@ public class MathUtilities
             return x;
         }
     }
-    public decimal Max(decimal x, decimal y)
+    public static decimal Max(decimal x, decimal y)
     {
-        if(x > y)
+        if (x > y)
         {
             return y;
         }
@@ -228,102 +228,237 @@ public class MathUtilities
         }
     }
 
-    // Add functions/ overrides
-    public int Add(int x, int y)
+    // Add functions/ overloads
+    public static int Add(int x, int y)
     {
         return x + y;
     }
-    public double Add(double x, double y)
+    public static double Add(double x, double y)
     {
         return x + y;
     }
-    public float Add(float x, float y)
+    public static float Add(float x, float y)
     {
         return x + y;
     }
-    public decimal Add(decimal x, decimal y)
+    public static decimal Add(decimal x, decimal y)
     {
         return x + y;
     }
 
-    // Subtract functions/ overrides
-    public int Subtract(int x, int y)
+    // Subtract functions/ overloads
+    public static int Subtract(int x, int y)
     {
         return x - y;
     }
-    public double Subtract(double x, double y)
+    public static double Subtract(double x, double y)
     {
         return x - y;
     }
-    public float Subtract(float x, float y)
+    public static float Subtract(float x, float y)
     {
         return x - y;
     }
-    public decimal Subtract(decimal x, decimal y)
+    public static decimal Subtract(decimal x, decimal y)
     {
         return x - y;
     }
 
-    // Multiply functions/ overrides
-    public int Multiply(int x, int y)
+    // Multiply functions/ overloads
+    public static int Multiply(int x, int y)
     {
         return x * y;
     }
-    public double Multiply(double x, double y)
+    public static double Multiply(double x, double y)
     {
         return x * y;
     }
-    public float Multiply(float x, float y)
+    public static float Multiply(float x, float y)
     {
         return x * y;
     }
-    public decimal Multiply(decimal x, decimal y)
+    public static decimal Multiply(decimal x, decimal y)
     {
         return x * y;
     }
 
-    // Divide functions/ overrides
-    public int Divide(int x, int y)
+    // Divide functions/ overloads
+    public static int Divide(int x, int y)
     {
         return x / y;
     }
-    public double Divide(double x, double y)
+    public static double Divide(double x, double y)
     {
         return x / y;
     }
-    public float Divide(float x, float y)
+    public static float Divide(float x, float y)
     {
         return x / y;
     }
-    public decimal Divide(decimal x, decimal y)
+    public static decimal Divide(decimal x, decimal y)
     {
         return x / y;
     }
 
-    // Percentage functions/ overrides
-    public int Percentage(int value, int total)
+    // Percentage functions/ overloads
+    public static int Percentage(int value, int total)
     {
         return (value / total) * 100;
     }
-    public double Percentage(double value, double total)
+    public static double Percentage(double value, double total)
     {
         return (value / total) * 100;
     }
-    public float Percentage(float value, float total)
+    public static float Percentage(float value, float total)
     {
         return (value / total) * 100;
     }
-    public decimal Percentage(decimal value, decimal total)
+    public static decimal Percentage(decimal value, decimal total)
     {
         return (value / total) * 100;
     }
 
-    // Binary function/ overrides.
-    // public int Binary(int x)
-    // {
-    //     if(x != 0)
-    //     {
+    // Binary function/ overloads
+    public static string Binary(int x)
+    {
+        string binary = "";
+        while (x > 0)
+        {
+            int temp = x;
+            temp %= 2;
+            x /= 2;
+            if(temp == 0) {
+                binary = $"0{binary}";
+            } else {
+                binary = $"1{binary}";
+            }
+        }
+        Console.WriteLine(binary);
+        return binary;
+    }
 
-    //     }
-    // }
-}     
+    public static string Binary(double x)
+    {
+        string binary = "";
+
+        return binary;
+    }
+
+    // floor functions/ overloads
+        public static int Floor(int x)
+    {
+        int temp = Convert.ToInt32(x);
+        if (temp > x)
+        {
+            return temp - 1;
+        }
+        else
+        {
+            return temp;
+        }
+    }
+    public static int Floor(double x)
+    {
+        int temp = Convert.ToInt32(x);
+        if (temp > x)
+        {
+            return temp - 1;
+        }
+        else
+        {
+            return temp;
+        }
+    }
+    public static int Floor(decimal x)
+    {
+        int temp = Convert.ToInt32(x);
+        if (temp > x)
+        {
+            return temp - 1;
+        }
+        else
+        {
+            return temp;
+        }
+    }
+    public static int Floor(float x)
+    {
+        int temp = Convert.ToInt32(x);
+        if (temp > x)
+        {
+            return temp - 1;
+        }
+        else
+        {
+            return temp;
+        }
+    }
+
+    // ceiling functions/ overloads
+    public static int ceiling(int x)
+    {
+        int temp = Convert.ToInt32(x);
+        if (temp > x)
+        {
+            return temp;
+        }
+        else
+        {
+            return temp + 1;
+        }
+    }
+    public static int ceiling(double x)
+    {
+        int temp = Convert.ToInt32(x);
+        if (temp > x)
+        {
+            return temp;
+        }
+        else
+        {
+            return temp + 1;
+        }
+    }
+    public static int ceiling(decimal x)
+    {
+        int temp = Convert.ToInt32(x);
+        if (temp > x)
+        {
+            return temp;
+        }
+        else
+        {
+            return temp + 1;
+        }
+    }
+    public static int ceiling(float x)
+    {
+        int temp = Convert.ToInt32(x);
+        if (temp > x)
+        {
+            return temp;
+        }
+        else
+        {
+            return temp + 1;
+        }
+    }
+
+    // Round functions/ overloads
+    public static int round(int x)
+    {
+        return Convert.ToInt32(x);
+    }
+    public static int round(double x)
+    {
+        return Convert.ToInt32(x);
+    }
+    public static int round(float x)
+    {
+        return Convert.ToInt32(x);
+    }
+    public static int round(decimal x)
+    {
+        return Convert.ToInt32(x);
+    }
+}
