@@ -285,6 +285,74 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
+        //sortascending
+        public static int[] SortAscending(int[] nums) { //probably terribly inefficient lol
+            int[] x = nums; //create a shallow copy of nums so we don't overwrite it lol
+            int[] y = new int[0]; // create a new array to sort into
+            int temp;
+            while (x.Length > 0) { //for every item in x
+                temp = Min(x); //get the minimum
+                y = Append(y, temp); //put it in y
+                x = Remove(x, IndexOf(x, temp)); //remove it from x
+            }
+            // at the end you should have a sorted array
+            return y;
+        }
+
+        public static float[] SortAscending(float[] nums) {
+            float[] x = nums;
+            float[] y = new float[0];
+            float temp;
+            while (x.Length > 0) {
+                temp = Min(x);
+                y = Append(y, temp);
+                x = Remove(x, IndexOf(x, temp));
+            }
+            
+            return y;
+        }
+
+        public static double[] SortAscending(double[] nums) {
+            double[] x = nums;
+            double[] y = new double[0];
+            double temp;
+            while (x.Length > 0) {
+                temp = Min(x);
+                y = Append(y, temp);
+                x = Remove(x, IndexOf(x, temp));
+            }
+            
+            return y;
+        }
+
+        public static decimal[] SortAscending(decimal[] nums) {
+            decimal[] x = nums;
+            decimal[] y = new decimal[0];
+            decimal temp;
+            while (x.Length > 0) {
+                temp = Min(x);
+                y = Append(y, temp);
+                x = Remove(x, IndexOf(x, temp));
+            }
+            
+            return y;
+        }
+
+        public static int[] SortDescending(int[] nums) {
+            return Reverse(SortAscending(nums)); // just sort it and reverse it lol. this is ok bc we're returning a copy
+        }
+
+        public static float[] SortDescending(float[] nums) {
+            return Reverse(SortAscending(nums));
+        }
+
+        public static double[] SortDescending(double[] nums) {
+            return Reverse(SortAscending(nums));
+        }
+
+        public static decimal[] SortDescending(decimal[] nums) {
+            return Reverse(SortAscending(nums));
+        }
 
         //sum
         public static int Sum(int[] nums)
@@ -575,8 +643,8 @@
                 {
                     if (!Contains(values, i)) //if values doesn't have an entry for a number
                     {
-                        Append(values, i); //create one, and a corresponding entry in counts containing its occurrences
-                        Append(counts, HowMany(nums, i));
+                        values = Append(values, i); //create one, and a corresponding entry in counts containing its occurrences
+                        values = Append(counts, HowMany(nums, i));
                     }
                 }
 
@@ -605,8 +673,8 @@
                 {
                     if (!Contains(values, i))
                     {
-                        Append(values, i);
-                        Append(counts, HowMany(nums, i));
+                        values = Append(values, i);
+                        counts = Append(counts, HowMany(nums, i));
                     }
                 }
 
@@ -635,8 +703,8 @@
                 {
                     if (!Contains(values, i))
                     {
-                        Append(values, i);
-                        Append(counts, HowMany(nums, i));
+                        values = Append(values, i);
+                        counts = Append(counts, HowMany(nums, i));
                     }
                 }
 
@@ -655,7 +723,8 @@
 
         public static decimal Mode(decimal[] nums)
         {
-            if (nums.Length > 0) {
+            if (nums.Length > 0)
+            {
                 decimal[] values = new decimal[0];
                 int[] counts = new int[0];
 
@@ -663,8 +732,8 @@
                 {
                     if (!Contains(values, i))
                     {
-                        Append(values, i);
-                        Append(counts, HowMany(nums, i));
+                        values = Append(values, i);
+                        counts = Append(counts, HowMany(nums, i));
                     }
                 }
 
@@ -681,11 +750,13 @@
             else throw new FormatException("Expected a non-empty array!");
         }
 
-        public static int[] AddToAll(int[] x, int y) {
+        public static int[] AddToAll(int[] x, int y)
+        {
             int temp = 0;
             int[] z = new int[x.Length];
 
-            for (int i = 0; i < x.Length; i++) { //deep copy x to z
+            for (int i = 0; i < x.Length; i++)
+            { //deep copy x to z
                 temp = x[i];
                 temp += y; //add the number
                 z[i] = temp;
@@ -693,6 +764,51 @@
 
             return z;
         }
+
+        public static float[] AddToAll(float[] x, float y)
+        {
+            float temp = 0;
+            float[] z = new float[x.Length];
+
+            for (int i = 0; i < x.Length; i++)
+            { //deep copy x to z
+                temp = x[i];
+                temp += y; //add the number
+                z[i] = temp;
+            }
+
+            return z;
+        }
+        public static double[] AddToAll(double[] x, double y)
+        {
+            double temp = 0;
+            double[] z = new double[x.Length];
+
+            for (int i = 0; i < x.Length; i++)
+            { //deep copy x to z
+                temp = x[i];
+                temp += y; //add the number
+                z[i] = temp;
+            }
+
+            return z;
+        }
+        public static decimal[] AddToAll(decimal[] x, decimal y)
+        {
+            decimal temp = 0;
+            decimal[] z = new decimal[x.Length];
+
+            for (int i = 0; i < x.Length; i++)
+            { //deep copy x to z
+                temp = x[i];
+                temp += y; //add the number
+                z[i] = temp;
+            }
+
+            return z;
+        }
+
+
 
         //append
         public static int[] Append(int[] x, int y)
@@ -726,6 +842,78 @@
 
             return z;
         }
+
+        //remove
+
+        public static int[] Remove(int[] x, int y)
+        {
+            if (y >= x.Length || y < 0) return x; //if y is outside the bounds of the array, do nothing
+
+            int[] z = new int[0];
+
+            for (int i = 0; i < x.Length; i++)
+            { //for everything in the array
+                if (i != y)
+                {   // if it's not at the specified index
+                    z = Append(z, x[i]); // copy it over
+                }
+            }
+
+            return z;
+        }
+
+        public static float[] Remove(float[] x, float y)
+        {
+            if (y >= x.Length || y < 0) return x; //if y is outside the bounds of the array, do nothing
+
+            float[] z = new float[0];
+
+            for (int i = 0; i < x.Length; i++)
+            { //for everything in the array
+                if (i != y)
+                {   // if it's not at the specified index
+                    z = Append(z, x[i]); // copy it over
+                }
+            }
+
+            return z;
+        }
+
+        public static double[] Remove(double[] x, double y)
+        {
+            if (y >= x.Length || y < 0) return x; //if y is outside the bounds of the array, do nothing
+
+            double[] z = new double[0];
+
+            for (int i = 0; i < x.Length; i++)
+            { //for everything in the array
+                if (i != y)
+                {   // if it's not at the specified index
+                    z = Append(z, x[i]); // copy it over
+                }
+            }
+
+            return z;
+        }
+
+        public static decimal[] Remove(decimal[] x, decimal y)
+        {
+            if (y >= x.Length || y < 0) return x; //if y is outside the bounds of the array, do nothing
+
+            decimal[] z = new decimal[0];
+
+            for (int i = 0; i < x.Length; i++)
+            { //for everything in the array
+                if (i != y)
+                {   // if it's not at the specified index
+                    z = Append(z, x[i]); // copy it over
+                }
+            }
+
+            return z;
+        }
+
+        
 
 
         //contains
