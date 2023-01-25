@@ -185,7 +185,7 @@ public static class MathUtilities
     // Max functions/ overloads
     public static int Max(int x, int y)
     {
-        if (x > y)
+        if (x < y)
         {
             return y;
         }
@@ -196,7 +196,7 @@ public static class MathUtilities
     }
     public static double Max(double x, double y)
     {
-        if (x > y)
+        if (x < y)
         {
             return y;
         }
@@ -207,7 +207,7 @@ public static class MathUtilities
     }
     public static float Max(float x, float y)
     {
-        if (x > y)
+        if (x < y)
         {
             return y;
         }
@@ -218,7 +218,7 @@ public static class MathUtilities
     }
     public static decimal Max(decimal x, decimal y)
     {
-        if (x > y)
+        if (x < y)
         {
             return y;
         }
