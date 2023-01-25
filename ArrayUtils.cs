@@ -485,7 +485,7 @@
             {
                 int[] nums2 = new int[nums.Length];
                 int x = 0;
-                for (int i = nums.Length; i > 0; i--)
+                for (int i = nums.Length - 1; i >= 0; i--)
                 { // iterate through the array in reverse
                     nums2[x] = nums[i];
                     x++;
@@ -503,7 +503,7 @@
             {
                 float[] nums2 = new float[nums.Length];
                 int x = 0;
-                for (int i = nums.Length; i > 0; i--)
+                for (int i = nums.Length - 1; i >= 0; i--)
                 {
                     nums2[x] = nums[i];
                     x++;
@@ -521,7 +521,7 @@
             {
                 double[] nums2 = new double[nums.Length];
                 int x = 0;
-                for (int i = nums.Length; i > 0; i--)
+                for (int i = nums.Length - 1; i >= 0; i--)
                 {
                     nums2[x] = nums[i];
                     x++;
@@ -539,7 +539,7 @@
             {
                 decimal[] nums2 = new decimal[nums.Length];
                 int x = 0;
-                for (int i = nums.Length; i > 0; i--)
+                for (int i = nums.Length - 1; i >= 0; i--)
                 {
                     nums2[x] = nums[i];
                     x++;
@@ -557,15 +557,16 @@
         {
             if (nums.Length > 0)
             {
+                int[] nums2 = SortAscending(nums);
                 if (nums.Length % 2 == 1)  //if the array has an odd length...
                 {
-                    return nums[nums.Length / 2 - 1]; // just get the middle integer.
+                    return nums2[nums.Length / 2 - 1]; // just get the middle integer.
                 }
                 else //otherwise...
                 {
-                    double x = nums[nums.Length / 2]; //average the middle two numbers.
-                    double y = nums[nums.Length / 2 - 1];
-                    return (x + y / 2);
+                    double x = nums2[nums2.Length / 2]; //average the middle two numbers.
+                    double y = nums2[nums2.Length / 2 - 1];
+                    return ((x + y) / 2);
                 }
             }
 
@@ -576,15 +577,16 @@
         {
             if (nums.Length > 0)
             {
-                if (nums.Length % 2 == 1)
+                float[] nums2 = SortAscending(nums);
+                if (nums.Length % 2 == 1)  //if the array has an odd length...
                 {
-                    return nums[nums.Length / 2 - 1];
+                    return nums2[nums.Length / 2 - 1]; // just get the middle integer.
                 }
-                else
+                else //otherwise...
                 {
-                    float x = nums[nums.Length / 2];
-                    float y = nums[nums.Length / 2 - 1];
-                    return (x + y / 2);
+                    float x = nums2[nums2.Length / 2]; //average the middle two numbers.
+                    float y = nums2[nums2.Length / 2 - 1];
+                    return ((x + y) / 2);
                 }
             }
 
@@ -595,15 +597,16 @@
         {
             if (nums.Length > 0)
             {
-                if (nums.Length % 2 == 1)
+                double[] nums2 = SortAscending(nums);
+                if (nums.Length % 2 == 1)  //if the array has an odd length...
                 {
-                    return nums[nums.Length / 2 - 1];
+                    return nums2[nums.Length / 2 - 1]; // just get the middle integer.
                 }
-                else
+                else //otherwise...
                 {
-                    double x = nums[nums.Length / 2];
-                    double y = nums[nums.Length / 2 - 1];
-                    return (x + y / 2);
+                    double x = nums2[nums2.Length / 2]; //average the middle two numbers.
+                    double y = nums2[nums2.Length / 2 - 1];
+                    return ((x + y) / 2);
                 }
             }
 
@@ -614,15 +617,16 @@
         {
             if (nums.Length > 0)
             {
-                if (nums.Length % 2 == 1)
+                decimal[] nums2 = SortAscending(nums);
+                if (nums.Length % 2 == 1)  //if the array has an odd length...
                 {
-                    return nums[nums.Length / 2 - 1];
+                    return nums2[nums.Length / 2 - 1]; // just get the middle integer.
                 }
-                else
+                else //otherwise...
                 {
-                    decimal x = nums[nums.Length / 2];
-                    decimal y = nums[nums.Length / 2 - 1];
-                    return (x + y / 2);
+                    decimal x = nums2[nums2.Length / 2]; //average the middle two numbers.
+                    decimal y = nums2[nums2.Length / 2 - 1];
+                    return ((x + y) / 2);
                 }
             }
 
@@ -644,7 +648,7 @@
                     if (!Contains(values, i)) //if values doesn't have an entry for a number
                     {
                         values = Append(values, i); //create one, and a corresponding entry in counts containing its occurrences
-                        values = Append(counts, HowMany(nums, i));
+                        counts = Append(counts, HowMany(nums, i));
                     }
                 }
 
@@ -741,7 +745,7 @@
 
                 if (HowMany(counts, maxcount) > 1)
                 {
-                    throw new ArithmeticException();
+                    throw new Exception();
                 }
 
                 return values[IndexOf(counts, maxcount)];
@@ -814,6 +818,9 @@
         public static int[] Append(int[] x, int y)
         {
             int[] z = new int[x.Length + 1];
+            for (int i = 0; i < x.Length; i++) {
+                z[i] = x[i];
+            }
             z[x.Length] = y;
 
             return z;
@@ -822,6 +829,9 @@
         public static float[] Append(float[] x, float y)
         {
             float[] z = new float[x.Length + 1];
+            for (int i = 0; i < x.Length; i++) {
+                z[i] = x[i];
+            }
             z[x.Length] = y;
 
             return z;
@@ -830,6 +840,9 @@
         public static double[] Append(double[] x, double y)
         {
             double[] z = new double[x.Length + 1];
+            for (int i = 0; i < x.Length; i++) {
+                z[i] = x[i];
+            }
             z[x.Length] = y;
 
             return z;
@@ -838,6 +851,9 @@
         public static decimal[] Append(decimal[] x, decimal y)
         {
             decimal[] z = new decimal[x.Length + 1];
+            for (int i = 0; i < x.Length; i++) {
+                z[i] = x[i];
+            }
             z[x.Length] = y;
 
             return z;
