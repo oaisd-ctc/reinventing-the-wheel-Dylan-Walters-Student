@@ -233,5 +233,18 @@ public static class StringUtilities
         }
         return count;
     }
+    public static int CountConsonants(string s)
+    {
+        s = ToUpper(s);
+        int count = 0;
+        for (int i = 0; i < s.Length; i++)
+        {
+            if (s[i] != 'A' && s[i] != 'E' && s[i] != 'I' && s[i] != 'O' && s[i] != 'U')
+            {
+                count++;
+            }
+        }
+        return count;
+    }
 }
 
