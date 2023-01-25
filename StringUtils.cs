@@ -188,7 +188,7 @@ public static class StringUtilities
     public static int Length(string s)
     {
         int length = 0;
-        foreach(char letter in s)
+        foreach (char letter in s)
         {
             length += 1;
         }
@@ -222,8 +222,16 @@ public static class StringUtilities
     }
     public static int CountVowels(string s)
     {
-        char[] vowels = {A, E, I, O, U};
         s = ToUpper(s);
+        int count = 0;
+        for (int i = 0; i < s.Length; i++)
+        {
+            if (s[i] == 'A' || s[i] == 'E' || s[i] == 'I' || s[i] == 'O' || s[i] == 'U')
+            {
+                count++;
+            }
+        }
+        return count;
     }
 }
 
