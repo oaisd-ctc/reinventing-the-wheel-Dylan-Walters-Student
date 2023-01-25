@@ -6,7 +6,8 @@
     <RootNamespace>reinventing_the_wheel_Dylan_Walters_Student</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GenerateProgramFile>false</GenerateProgramFile>
+    <!-- <GenerateProgramFile>false</GenerateProgramFile> -->
+    <StartupObject>guh.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
