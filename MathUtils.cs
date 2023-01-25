@@ -303,7 +303,9 @@ public static class MathUtilities
     // Percentage functions/ overloads
     public static int Percentage(int value, int total)
     {
-        return (value / total) * 100;
+        double x = value;
+        double y = total;
+        return (int) ((x / y) * 100);
     }
     public static double Percentage(double value, double total)
     {

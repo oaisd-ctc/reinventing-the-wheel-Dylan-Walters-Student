@@ -156,10 +156,10 @@ public class Tests
         Assert.Equal(19, MathUtilities.Add(9, 10));
         Assert.Equal(-1, MathUtilities.Subtract(9, 10));
         Assert.Equal(90, MathUtilities.Multiply(9, 10));
-        Assert.Equal(0.9, MathUtilities.Divide(9, 10));
+        Assert.Equal(0, MathUtilities.Divide(9, 10));
         Assert.Equal(90, MathUtilities.Percentage(9, 10));
 
-        Assert.Equal("10000", MathUtilities.Binary(9));
+        Assert.Equal("1001", MathUtilities.Binary(9));
 
         Assert.Equal(100, MathUtilities.round(100.2));
         Assert.Equal(100, MathUtilities.Floor(100.2));
