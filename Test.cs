@@ -1,5 +1,6 @@
 using Xunit;
 using ArrayUtils;
+using MathUtils;
 public class Tests
 {
 
@@ -140,5 +141,29 @@ public class Tests
             Assert.Throws<FormatException>(() => ArrayUtilities.Median(nums));
             Assert.Throws<FormatException>(() => ArrayUtilities.Mode(nums));
         }
+    }
+
+
+    [Fact]
+    public void MathTests() {
+        Assert.Equal(243, MathUtilities.Power(3, 5));
+        Assert.Equal(1.7320508100147274, MathUtilities.SquareRoot(3));
+        Assert.Equal(5, MathUtilities.AbsoluteValue(-5));
+
+        Assert.Equal(6, MathUtilities.Min(6, 9));
+        Assert.Equal(9, MathUtilities.Max(6, 9));
+
+        Assert.Equal(19, MathUtilities.Add(9, 10));
+        Assert.Equal(-1, MathUtilities.Subtract(9, 10));
+        Assert.Equal(90, MathUtilities.Multiply(9, 10));
+        Assert.Equal(0.9, MathUtilities.Divide(9, 10));
+        Assert.Equal(90, MathUtilities.Percentage(9, 10));
+
+        Assert.Equal("10000", MathUtilities.Binary(9));
+
+        Assert.Equal(100, MathUtilities.round(100.2));
+        Assert.Equal(100, MathUtilities.Floor(100.2));
+        Assert.Equal(101, MathUtilities.ceiling(100.2));
+
     }
 }
