@@ -91,8 +91,108 @@ public static class StringUtilities
             }
         }
         // Converts new Char Array to string then returns it
-    s = ToStringArray(charArray);
-    return s;
+        s = ToStringArray(charArray);
+        return s;
+    }
+    public static string ToLower(string s)
+    {
+        char[] charArray = ToCharArray(s);
+        for (int i = 0; i < charArray.Length; i++)
+        {
+            switch (charArray[i])
+            {
+                case 'A':
+                    charArray[i] = 'a';
+                    break;
+                case 'B':
+                    charArray[i] = 'b';
+                    break;
+                case 'C':
+                    charArray[i] = 'c';
+                    break;
+                case 'D':
+                    charArray[i] = 'd';
+                    break;
+                case 'E':
+                    charArray[i] = 'e';
+                    break;
+                case 'F':
+                    charArray[i] = 'f';
+                    break;
+                case 'G':
+                    charArray[i] = 'g';
+                    break;
+                case 'H':
+                    charArray[i] = 'h';
+                    break;
+                case 'I':
+                    charArray[i] = 'i';
+                    break;
+                case 'J':
+                    charArray[i] = 'j';
+                    break;
+                case 'K':
+                    charArray[i] = 'k';
+                    break;
+                case 'L':
+                    charArray[i] = 'l';
+                    break;
+                case 'M':
+                    charArray[i] = 'm';
+                    break;
+                case 'N':
+                    charArray[i] = 'n';
+                    break;
+                case 'O':
+                    charArray[i] = 'o';
+                    break;
+                case 'P':
+                    charArray[i] = 'p';
+                    break;
+                case 'Q':
+                    charArray[i] = 'q';
+                    break;
+                case 'R':
+                    charArray[i] = 'r';
+                    break;
+                case 'S':
+                    charArray[i] = 's';
+                    break;
+                case 'T':
+                    charArray[i] = 't';
+                    break;
+                case 'U':
+                    charArray[i] = 'u';
+                    break;
+                case 'V':
+                    charArray[i] = 'v';
+                    break;
+                case 'W':
+                    charArray[i] = 'w';
+                    break;
+                case 'X':
+                    charArray[i] = 'x';
+                    break;
+                case 'Y':
+                    charArray[i] = 'y';
+                    break;
+                case 'Z':
+                    charArray[i] = 'z';
+                    break;
+            }
+        }
+        // Converts new Char Array to string then returns it
+        s = ToStringArray(charArray);
+        return s;
+    }
+    public static int Length(string s)
+    {
+        int length = 0;
+        foreach(char letter in s)
+        {
+            length += 1;
+        }
+        return length;
     }
     public static char[] ToCharArray(string s)
     {
@@ -104,10 +204,26 @@ public static class StringUtilities
         }
         return charArray;
     }
+
+    // This one doesnt need to be a function cause its simple to write it in one line but here it is... you're welcome :)
     public static string ToStringArray(char[] characters)
     {
-        string s = new string(characters);
+        return new string(characters);
+    }
+    public static string reverse(string s)
+    {
+        char[] charArray = new char[s.Length];
+        for (int i = s.Length; i > 0; i--)
+        {
+            charArray[i] = s[i];
+        }
+        s = ToStringArray(charArray);
         return s;
+    }
+    public static int CountVowels(string s)
+    {
+        char[] vowels = {A, E, I, O, U};
+        s = ToUpper(s);
     }
 }
 
