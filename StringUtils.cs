@@ -246,5 +246,58 @@ public static class StringUtilities
         }
         return count;
     }
+    public static bool HasLetter(string s, char c)
+    {
+        bool hello = false;
+        foreach (char letter in s)
+        {
+            if (letter == c)
+            {
+                hello = true;
+            }
+        }
+        return hello;
+    }
+    public static string CaeserCipher(string s, int arrange)
+    {
+        char[] lower = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        char[] upper = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+        char[] characters = ToCharArray(s);
+        
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if (isUpper(characters[i]))
+            {
+                if (arrange > 26)
+                {
+                    arrange %= 26;
+                }
+                characters[i] = characters[arrange];
+            }
+            else
+            {
+                if (arrange > 26)
+                {
+                    arrange %= 26;
+                }
+                characters[i] = characters[arrange];
+            }
+        }
+        return ToStringArray(characters);
+    }
+    public static bool isUpper(char c)
+    {
+        char[] upper = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+        bool cap = false;
+        for (int i = 0; i < upper.Length; i++)
+        {
+            if (c == upper[i])
+            {
+                cap = true;
+                break;
+            }
+        }
+        return cap;
+    }
 }
 
