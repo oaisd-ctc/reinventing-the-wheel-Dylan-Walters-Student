@@ -94,6 +94,92 @@ public static class StringUtilities
         s = ToStringArray(charArray);
         return s;
     }
+    public static char ToUpper(char c)
+    {
+        switch (c)
+        {
+            case 'a':
+                c = 'A';
+                break;
+            case 'b':
+                c = 'B';
+                break;
+            case 'c':
+                c = 'C';
+                break;
+            case 'd':
+                c = 'D';
+                break;
+            case 'e':
+                c = 'E';
+                break;
+            case 'f':
+                c = 'F';
+                break;
+            case 'g':
+                c = 'G';
+                break;
+            case 'h':
+                c = 'H';
+                break;
+            case 'i':
+                c = 'I';
+                break;
+            case 'j':
+                c = 'J';
+                break;
+            case 'k':
+                c = 'K';
+                break;
+            case 'l':
+                c = 'L';
+                break;
+            case 'm':
+                c = 'M';
+                break;
+            case 'n':
+                c = 'N';
+                break;
+            case 'o':
+                c = 'O';
+                break;
+            case 'p':
+                c = 'P';
+                break;
+            case 'q':
+                c = 'Q';
+                break;
+            case 'r':
+                c = 'R';
+                break;
+            case 's':
+                c = 'S';
+                break;
+            case 't':
+                c = 'T';
+                break;
+            case 'u':
+                c = 'U';
+                break;
+            case 'v':
+                c = 'V';
+                break;
+            case 'w':
+                c = 'W';
+                break;
+            case 'x':
+                c = 'X';
+                break;
+            case 'y':
+                c = 'Y';
+                break;
+            case 'z':
+                c = 'Z';
+                break;
+
+        }
+        return c;
+    }
     public static string ToLower(string s)
     {
         char[] charArray = ToCharArray(s);
@@ -260,10 +346,10 @@ public static class StringUtilities
     }
     public static string CaeserCipher(string s, int arrange)
     {
-        char[] lower = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-        char[] upper = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+        char[] lower = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+        char[] upper = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
         char[] characters = ToCharArray(s);
-        
+
         for (int i = 0; i < characters.Length; i++)
         {
             if (isUpper(characters[i]))
@@ -287,7 +373,7 @@ public static class StringUtilities
     }
     public static bool isUpper(char c)
     {
-        char[] upper = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+        char[] upper = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
         bool cap = false;
         for (int i = 0; i < upper.Length; i++)
         {
@@ -298,6 +384,23 @@ public static class StringUtilities
             }
         }
         return cap;
+    }
+    public static string ToAlternatingCase(string s)
+    {
+        // sets string to a lowercase char[]
+        string set = ToLower(s);
+        char[] characters = ToCharArray(set);
+        for (int i = 0; i < characters.Length; i++)
+        {
+            // capitalizes even letters in char[]
+            if (i % 2 == 0)
+            {
+                char holder = characters[i];
+                char temp = ToUpper(holder);
+                characters[i] = temp;
+            }
+        }
+        return ToStringArray(characters);
     }
 }
 
