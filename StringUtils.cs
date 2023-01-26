@@ -1,5 +1,5 @@
 ﻿namespace StringUtils;
-
+using ArrayUtils;
 public static class StringUtilities
 {
     public static string ToUpper(string s)
@@ -346,30 +346,20 @@ public static class StringUtilities
     }
     public static string CaeserCipher(string s, int arrange)
     {
-        char[] lower = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
-        char[] upper = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-        char[] characters = ToCharArray(s);
-
+        char[] characters = ToCharArray((ToLower(s)));  //make it lowercase to make our lives easier
+        char[] charset = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+        int index;                                      // surprise tool that will help us later
         for (int i = 0; i < characters.Length; i++)
         {
-            if (isUpper(characters[i]))
-            {
-                if (arrange > 26)
-                {
-                    arrange %= 26;
-                }
-                characters[i] = characters[arrange];
+            index = (int)characters[i] - 97;            //convert character to integer ascii code (absolutely deranged)
+            if (!(index > 25 || index < 0))             //check if it's in the specified range (i belong in an asylum)
+            { 
+                characters[i] = charset[(index + arrange) % 26]; //offset it by the specified amount
             }
-            else
-            {
-                if (arrange > 26)
-                {
-                    arrange %= 26;
-                }
-                characters[i] = characters[arrange];
-            }
+
         }
-        return ToStringArray(characters);
+
+        return ToStringArray(characters); //accept that i will never enter heaven
     }
     public static bool isUpper(char c)
     {

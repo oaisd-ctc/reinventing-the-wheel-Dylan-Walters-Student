@@ -1,5 +1,6 @@
 using MathUtils; //ignore this lol i was using this for debuggging
 using ArrayUtils;
+using StringUtils;
 
 namespace guh;
 class Program
@@ -9,5 +10,7 @@ class Program
         int[] nums = {1, 1, 2, -1, 2, 3};
         int[] x = ArrayUtilities.SortAscending(nums);
         Console.WriteLine(ArrayUtilities.Median(nums));
+
+        Console.WriteLine(StringUtilities.CaeserCipher("among us joke", 1)); //hi
     }
 }
