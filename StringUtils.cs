@@ -353,7 +353,7 @@ public static class StringUtilities
         {
             index = (int)characters[i] - 97;            //convert character to integer ascii code (absolutely deranged)
             if (!(index > 25 || index < 0))             //check if it's in the specified range (i belong in an asylum)
-            { 
+            {
                 characters[i] = charset[(index + arrange) % 26]; //offset it by the specified amount
             }
 
@@ -392,5 +392,31 @@ public static class StringUtilities
         }
         return ToStringArray(characters);
     }
+    public static string OnlySpace(string s)
+    {
+        int count = 0;
+        foreach (char letter in s)
+        {
+            if ((int)letter == 32)
+            {
+                count++;
+            }
+        }
+        s = new string(' ', count);
+        return s;
+    }
+    public static string RemoveWhiteSpace(string s)
+    {
+        char[] noSpace = new char[s.Length];
+        int i = 0;
+        foreach (char letter in s)
+        {
+            if ((int)letter != 32)
+            { 
+                noSpace[i] = letter;
+            }
+            i++;
+        }
+        return ToStringArray(noSpace);
+    }
 }
-
