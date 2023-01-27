@@ -1,6 +1,7 @@
 using Xunit;
 using ArrayUtils;
 using MathUtils;
+using StringUtils;
 public class Tests
 {
 
@@ -223,6 +224,22 @@ public class Tests
         Assert.Equal(100.0m, MathUtilities.Floor(100.2m));
         Assert.Equal(101.0m, MathUtilities.ceiling(100.2m));
         }
+    }
 
+    [Fact]
+    public void StringTests()
+    {
+        {
+            string s = "Word123! .";
+            Assert.Equal(new char[] {'W', 'o', 'r', 'd', '1', '2', '3', '!', ' ', '.'}, StringUtilities.ToCharArray(s));
+        }
+
+        {
+
+        }
+
+        {
+
+        }
     }
 }
