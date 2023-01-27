@@ -344,7 +344,7 @@ public static class StringUtilities
         }
         return hello;
     }
-    public static string CaeserCipher(string s, int arrange)
+    public static string CaesarCipher(string s, int arrange)
     {
         char[] characters = ToCharArray((ToLower(s)));  //make it lowercase to make our lives easier
         char[] charset = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
