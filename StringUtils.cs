@@ -2,6 +2,14 @@
 using ArrayUtils;
 public static class StringUtilities
 {
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static string ToUpper(string s)
     {
         // P.S. SO SORRY! I dislike these long switch statement type stuff too but i'm going with it today!
@@ -94,6 +102,15 @@ public static class StringUtilities
         s = ToStringArray(charArray);
         return s;
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static char ToUpper(char c)
     {
         switch (c)
@@ -180,6 +197,15 @@ public static class StringUtilities
         }
         return c;
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static string ToLower(string s)
     {
         char[] charArray = ToCharArray(s);
@@ -271,6 +297,15 @@ public static class StringUtilities
         s = ToStringArray(charArray);
         return s;
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int Length(string s)
     {
         int length = 0;
@@ -280,6 +315,15 @@ public static class StringUtilities
         }
         return length;
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static char[] ToCharArray(string s)
     {
         // initinalize new array to put string chars in
@@ -291,11 +335,28 @@ public static class StringUtilities
         return charArray;
     }
 
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     // This one doesnt need to be a function cause its simple to write it in one line but here it is... you're welcome :)
     public static string ToStringArray(char[] characters)
     {
         return new string(characters);
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static string reverse(string s)
     {
         char[] charArray = new char[s.Length];
@@ -306,6 +367,15 @@ public static class StringUtilities
         s = ToStringArray(charArray);
         return s;
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int CountVowels(string s)
     {
         s = ToUpper(s);
@@ -319,6 +389,15 @@ public static class StringUtilities
         }
         return count;
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int CountConsonants(string s)
     {
         s = ToUpper(s);
@@ -332,6 +411,15 @@ public static class StringUtilities
         }
         return count;
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static bool HasLetter(string s, char c)
     {
         bool hello = false;
@@ -344,6 +432,15 @@ public static class StringUtilities
         }
         return hello;
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static string CaesarCipher(string s, int arrange)
     {
         char[] characters = ToCharArray((ToLower(s)));  //make it lowercase to make our lives easier
@@ -361,6 +458,15 @@ public static class StringUtilities
 
         return ToStringArray(characters); //accept that i will never enter heaven
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static bool isUpper(char c)
     {
         char[] upper = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
@@ -375,6 +481,15 @@ public static class StringUtilities
         }
         return cap;
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static string ToAlternatingCase(string s)
     {
         // sets string to a lowercase char[]
@@ -392,6 +507,15 @@ public static class StringUtilities
         }
         return ToStringArray(characters);
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static string OnlySpace(string s)
     {
         int count = 0;
@@ -405,6 +529,15 @@ public static class StringUtilities
         s = new string(' ', count);
         return s;
     }
+    
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static string RemoveWhiteSpace(string s)
     {
         char[] noSpace = new char[s.Length];

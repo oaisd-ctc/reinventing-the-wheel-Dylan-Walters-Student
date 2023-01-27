@@ -3,7 +3,14 @@
 public static class MathUtilities
 {
 
-    // Raised to a power functions/ overloads
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int Power(int b, int e)
     {
         int x = 1;
@@ -41,7 +48,15 @@ public static class MathUtilities
         return x;
     }
 
-    // square root functions/ overloads
+
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static double SquareRoot(int b)
     {
         double root = 1;
@@ -103,7 +118,15 @@ public static class MathUtilities
         return root;
     }
 
-    // Absolute value functions/ overloads
+
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int AbsoluteValue(int x)
     {
         if (x < 0)
@@ -137,7 +160,14 @@ public static class MathUtilities
         return x;
     }
 
-    // min functions/ overloads
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int Min(int x, int y)
     {
         if (x > y)
@@ -182,7 +212,15 @@ public static class MathUtilities
             return x;
         }
     }
-    // Max functions/ overloads
+
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int Max(int x, int y)
     {
         if (x < y)
@@ -228,7 +266,14 @@ public static class MathUtilities
         }
     }
 
-    // Add functions/ overloads
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int Add(int x, int y)
     {
         return x + y;
@@ -246,7 +291,14 @@ public static class MathUtilities
         return x + y;
     }
 
-    // Subtract functions/ overloads
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int Subtract(int x, int y)
     {
         return x - y;
@@ -264,7 +316,14 @@ public static class MathUtilities
         return x - y;
     }
 
-    // Multiply functions/ overloads
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int Multiply(int x, int y)
     {
         return x * y;
@@ -282,7 +341,14 @@ public static class MathUtilities
         return x * y;
     }
 
-    // Divide functions/ overloads
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int Divide(int x, int y)
     {
         return x / y;
@@ -300,7 +366,14 @@ public static class MathUtilities
         return x / y;
     }
 
-    // Percentage functions/ overloads
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int Percentage(int value, int total)
     {
         double x = value;
@@ -320,7 +393,14 @@ public static class MathUtilities
         return (value / total) * 100;
     }
 
-    // Binary function has no overloads
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static string Binary(int x)
     {
         string binary = "";
@@ -338,7 +418,14 @@ public static class MathUtilities
         return binary;
     }
 
-    // floor functions/ overloads
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
         public static int Floor(int x)
     {
         int temp = Convert.ToInt32(x);
@@ -388,7 +475,14 @@ public static class MathUtilities
         }
     }
 
-    // ceiling functions/ overloads
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int ceiling(int x)
     {
         int temp = Convert.ToInt32(x);
@@ -438,7 +532,14 @@ public static class MathUtilities
         }
     }
 
-    // Round functions/ overloads
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name=""> </param>
+    /// <param name=""> </param>
+    /// <returns>
+    ///
+    /// </returns>
     public static int round(int x)
     {
         return Convert.ToInt32(x);
