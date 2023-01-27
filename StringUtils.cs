@@ -3,12 +3,11 @@ using ArrayUtils;
 public static class StringUtilities
 {
     /// <summary>
-    ///
+    /// Changes each letter to be capitalized.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s">Input string to be capitalized.</param>
     /// <returns>
-    ///
+    /// The input string after capitalization.
     /// </returns>
     public static string ToUpper(string s)
     {
@@ -104,12 +103,11 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Makes selected char uppercase..
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="c">Input char to be capitalized.</param>
     /// <returns>
-    ///
+    /// The input cahr after capitalization.
     /// </returns>
     public static char ToUpper(char c)
     {
@@ -199,12 +197,11 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Changes each letter to be un-capitalized.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s">Input string to be un-capitalized.</param>
     /// <returns>
-    ///
+    /// The uncapitalized version of the input string..
     /// </returns>
     public static string ToLower(string s)
     {
@@ -299,12 +296,11 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Finds length of a string.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s">The string to find the length of.</param>
     /// <returns>
-    ///
+    /// Length of string.
     /// </returns>
     public static int Length(string s)
     {
@@ -317,12 +313,11 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Converts string to character array.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s">The string to turn into a char[].</param>
     /// <returns>
-    ///
+    /// Char[] of string.
     /// </returns>
     public static char[] ToCharArray(string s)
     {
@@ -336,12 +331,11 @@ public static class StringUtilities
     }
 
     /// <summary>
-    ///
+    /// Converts Char[] to a string.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="char[]">The char[] to turn into a string.</param>
     /// <returns>
-    ///
+    /// char[] as a string.
     /// </returns>
     // This one doesnt need to be a function cause its simple to write it in one line but here it is... you're welcome :)
     public static string ToStringArray(char[] characters)
@@ -350,12 +344,11 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Reverses string.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s">The string to reverse.</param>
     /// <returns>
-    ///
+    /// reversed String.
     /// </returns>
     public static string reverse(string s)
     {
@@ -369,12 +362,11 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Counts the number of vowels in a string.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s">Input to have vowels counted from.</param>
     /// <returns>
-    ///
+    /// The count of vowels as an integer.
     /// </returns>
     public static int CountVowels(string s)
     {
@@ -391,12 +383,11 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Counts every non-vowel (consonant) in a string
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s"> </param>
     /// <returns>
-    ///
+    /// Total count of consonants in an string.
     /// </returns>
     public static int CountConsonants(string s)
     {
@@ -413,12 +404,12 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Finds specified letter in a given string.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s">String to look through for the letter.</param>
+    /// <param name="c">Character to find in the given string.</param>
     /// <returns>
-    ///
+    /// True or false on if the character is in the string.
     /// </returns>
     public static bool HasLetter(string s, char c)
     {
@@ -434,12 +425,12 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Moves each letter through the alphabet by the given amount.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s">The given string to shuffle through the alphabet.</param>
+    /// <param name="arrange">An interger deciding how far the letter should shift in the alphabet.</param>
     /// <returns>
-    ///
+    /// The shuffled string.
     /// </returns>
     public static string CaesarCipher(string s, int arrange)
     {
@@ -460,12 +451,11 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Capitalizes a given character.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="c">Character to turn uppercase.</param>
     /// <returns>
-    ///
+    /// The given character as a capital letter.
     /// </returns>
     public static bool isUpper(char c)
     {
@@ -483,12 +473,11 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Alternates each letter as capitalized and uncapitalized.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s">String to alternate casing with.</param>
     /// <returns>
-    ///
+    /// Alternated string.
     /// </returns>
     public static string ToAlternatingCase(string s)
     {
@@ -509,12 +498,11 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Takes out anything that is not a space/ whitespace.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s">The given string to take out characters.</param>
     /// <returns>
-    ///
+    /// A string with the number of spaces from the original string.
     /// </returns>
     public static string OnlySpace(string s)
     {
@@ -531,12 +519,11 @@ public static class StringUtilities
     }
     
     /// <summary>
-    ///
+    /// Removes any spaces from a string.
     /// </summary>
-    /// <param name=""> </param>
-    /// <param name=""> </param>
+    /// <param name="s">String to have spaces taken out of.</param>
     /// <returns>
-    ///
+    /// String without any spaces in it.
     /// </returns>
     public static string RemoveWhiteSpace(string s)
     {
