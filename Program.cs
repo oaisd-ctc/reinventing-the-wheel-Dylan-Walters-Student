@@ -11,6 +11,6 @@ class Program
         int[] x = ArrayUtilities.SortAscending(nums);
         Console.WriteLine(ArrayUtilities.Median(nums));
 
-        Console.WriteLine(StringUtilities.CaeserCipher("among us joke", 1)); //hi
+        Console.WriteLine(StringUtilities.CaesarCipher("among us joke", 1)); //hi
     }
 }
