@@ -398,6 +398,7 @@ public static class MathUtilities
     /// </summary>
     /// <remarks>
     /// Why are you using this?
+    /// </remarks>
     /// <param name="x">The first addend.</param>
     /// <param name="y">The second addend.</param>
     /// <returns>
