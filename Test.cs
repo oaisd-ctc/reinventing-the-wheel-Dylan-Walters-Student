@@ -37,7 +37,7 @@ public class Tests
             Assert.Equal(-1, ArrayUtilities.IndexOf(nums, 69));
             Assert.Equal(2, ArrayUtilities.HowMany(nums, 2));
 
-            nums = new int[] {1, 2, -1, 2, 3 }; // test mode properly
+            nums = new int[] { 1, 2, -1, 2, 3 }; // test mode properly
             Assert.Equal(2, ArrayUtilities.Mode(nums));
         }
         {
@@ -146,100 +146,100 @@ public class Tests
 
 
     [Fact]
-    public void MathTests() {
+    public void MathTests()
+    {
         {
-        Assert.Equal(243, MathUtilities.Power(3, 5));
-        Assert.Equal(1.7320508100147274, MathUtilities.SquareRoot(3));
-        Assert.Equal(5, MathUtilities.AbsoluteValue(-5));
+            Assert.Equal(243, MathUtilities.Power(3, 5));
+            Assert.Equal(1.7320508100147274, MathUtilities.SquareRoot(3));
+            Assert.Equal(5, MathUtilities.AbsoluteValue(-5));
 
-        Assert.Equal(6, MathUtilities.Min(6, 9));
-        Assert.Equal(9, MathUtilities.Max(6, 9));
+            Assert.Equal(6, MathUtilities.Min(6, 9));
+            Assert.Equal(9, MathUtilities.Max(6, 9));
 
-        Assert.Equal(19, MathUtilities.Add(9, 10));
-        Assert.Equal(-1, MathUtilities.Subtract(9, 10));
-        Assert.Equal(90, MathUtilities.Multiply(9, 10));
-        Assert.Equal(0, MathUtilities.Divide(9, 10));
-        Assert.Equal(90, MathUtilities.Percentage(9, 10));
+            Assert.Equal(19, MathUtilities.Add(9, 10));
+            Assert.Equal(-1, MathUtilities.Subtract(9, 10));
+            Assert.Equal(90, MathUtilities.Multiply(9, 10));
+            Assert.Equal(0, MathUtilities.Divide(9, 10));
+            Assert.Equal(90, MathUtilities.Percentage(9, 10));
 
-        Assert.Equal("1001", MathUtilities.Binary(9));
+            Assert.Equal("1001", MathUtilities.Binary(9));
 
-        Assert.Equal(100, MathUtilities.round(100.2));
-        Assert.Equal(100, MathUtilities.Floor(100.2));
-        Assert.Equal(101, MathUtilities.ceiling(100.2));
+            Assert.Equal(100, MathUtilities.round(100.2));
+            Assert.Equal(100, MathUtilities.Floor(100.2));
+            Assert.Equal(101, MathUtilities.ceiling(100.2));
         }
 
         {
-        Assert.Equal(243f, MathUtilities.Power(3f, 5));
-        Assert.Equal(1.7320508100147274, MathUtilities.SquareRoot(3f));
-        Assert.Equal(5f, MathUtilities.AbsoluteValue(-5f));
+            Assert.Equal(243f, MathUtilities.Power(3f, 5));
+            Assert.Equal(1.7320508100147274, MathUtilities.SquareRoot(3f));
+            Assert.Equal(5f, MathUtilities.AbsoluteValue(-5f));
 
-        Assert.Equal(6f, MathUtilities.Min(6f, 9f));
-        Assert.Equal(9f, MathUtilities.Max(6f, 9f));
+            Assert.Equal(6f, MathUtilities.Min(6f, 9f));
+            Assert.Equal(9f, MathUtilities.Max(6f, 9f));
 
-        Assert.Equal(19f, MathUtilities.Add(9f, 10f));
-        Assert.Equal(-1f, MathUtilities.Subtract(9f, 10f));
-        Assert.Equal(90f, MathUtilities.Multiply(9f, 10f));
-        Assert.Equal(0.9f, MathUtilities.Divide(9f, 10f));
-        Assert.Equal(90f, MathUtilities.Percentage(9f, 10f));
+            Assert.Equal(19f, MathUtilities.Add(9f, 10f));
+            Assert.Equal(-1f, MathUtilities.Subtract(9f, 10f));
+            Assert.Equal(90f, MathUtilities.Multiply(9f, 10f));
+            Assert.Equal(0.9f, MathUtilities.Divide(9f, 10f));
+            Assert.Equal(90f, MathUtilities.Percentage(9f, 10f));
 
-        Assert.Equal(100f, MathUtilities.round(100.2f));
-        Assert.Equal(100f, MathUtilities.Floor(100.2f));
-        Assert.Equal(101f, MathUtilities.ceiling(100.2f));
+            Assert.Equal(100f, MathUtilities.round(100.2f));
+            Assert.Equal(100f, MathUtilities.Floor(100.2f));
+            Assert.Equal(101f, MathUtilities.ceiling(100.2f));
         }
 
         {
-        Assert.Equal(243.0, MathUtilities.Power(3.0, 5.0));
-        Assert.Equal(1.7320508100147274, MathUtilities.SquareRoot(3.0));
-        Assert.Equal(5.0, MathUtilities.AbsoluteValue(-5.0));
+            Assert.Equal(243.0, MathUtilities.Power(3.0, 5.0));
+            Assert.Equal(1.7320508100147274, MathUtilities.SquareRoot(3.0));
+            Assert.Equal(5.0, MathUtilities.AbsoluteValue(-5.0));
 
-        Assert.Equal(6.0, MathUtilities.Min(6.0, 9.0));
-        Assert.Equal(9.0, MathUtilities.Max(6.0, 9.0));
+            Assert.Equal(6.0, MathUtilities.Min(6.0, 9.0));
+            Assert.Equal(9.0, MathUtilities.Max(6.0, 9.0));
 
-        Assert.Equal(19.0, MathUtilities.Add(9.0, 10.0));
-        Assert.Equal(-1.0, MathUtilities.Subtract(9.0, 10.0));
-        Assert.Equal(90.0, MathUtilities.Multiply(9.0, 10.0));
-        Assert.Equal(0.9, MathUtilities.Divide(9.0, 10.0));
-        Assert.Equal(90.0, MathUtilities.Percentage(9.0, 10.0));
+            Assert.Equal(19.0, MathUtilities.Add(9.0, 10.0));
+            Assert.Equal(-1.0, MathUtilities.Subtract(9.0, 10.0));
+            Assert.Equal(90.0, MathUtilities.Multiply(9.0, 10.0));
+            Assert.Equal(0.9, MathUtilities.Divide(9.0, 10.0));
+            Assert.Equal(90.0, MathUtilities.Percentage(9.0, 10.0));
 
-        Assert.Equal(100.0, MathUtilities.round(100.2));
-        Assert.Equal(100.0, MathUtilities.Floor(100.2));
-        Assert.Equal(101.0, MathUtilities.ceiling(100.2));
+            Assert.Equal(100.0, MathUtilities.round(100.2));
+            Assert.Equal(100.0, MathUtilities.Floor(100.2));
+            Assert.Equal(101.0, MathUtilities.ceiling(100.2));
         }
 
         {
-        Assert.Equal(243.0m, MathUtilities.Power(3.0m, 5.0m));
-        Assert.Equal(1.732050810014727540500736377m, MathUtilities.SquareRoot(3.0m));
-        Assert.Equal(5.0m, MathUtilities.AbsoluteValue(-5.0m));
+            Assert.Equal(243.0m, MathUtilities.Power(3.0m, 5.0m));
+            Assert.Equal(1.732050810014727540500736377m, MathUtilities.SquareRoot(3.0m));
+            Assert.Equal(5.0m, MathUtilities.AbsoluteValue(-5.0m));
 
-        Assert.Equal(6.0m, MathUtilities.Min(6.0m, 9.0m));
-        Assert.Equal(9.0m, MathUtilities.Max(6.0m, 9.0m));
+            Assert.Equal(6.0m, MathUtilities.Min(6.0m, 9.0m));
+            Assert.Equal(9.0m, MathUtilities.Max(6.0m, 9.0m));
 
-        Assert.Equal(19.0m, MathUtilities.Add(9.0m, 10.0m));
-        Assert.Equal(-1.0m, MathUtilities.Subtract(9.0m, 10.0m));
-        Assert.Equal(90.0m, MathUtilities.Multiply(9.0m, 10.0m));
-        Assert.Equal(0.9m, MathUtilities.Divide(9.0m, 10.0m));
-        Assert.Equal(90.0m, MathUtilities.Percentage(9.0m, 10.0m));
+            Assert.Equal(19.0m, MathUtilities.Add(9.0m, 10.0m));
+            Assert.Equal(-1.0m, MathUtilities.Subtract(9.0m, 10.0m));
+            Assert.Equal(90.0m, MathUtilities.Multiply(9.0m, 10.0m));
+            Assert.Equal(0.9m, MathUtilities.Divide(9.0m, 10.0m));
+            Assert.Equal(90.0m, MathUtilities.Percentage(9.0m, 10.0m));
 
-        Assert.Equal(100.0m, MathUtilities.round(100.2m));
-        Assert.Equal(100.0m, MathUtilities.Floor(100.2m));
-        Assert.Equal(101.0m, MathUtilities.ceiling(100.2m));
+            Assert.Equal(100.0m, MathUtilities.round(100.2m));
+            Assert.Equal(100.0m, MathUtilities.Floor(100.2m));
+            Assert.Equal(101.0m, MathUtilities.ceiling(100.2m));
         }
     }
 
     [Fact]
     public void StringTests()
     {
-        {
-            string s = "Word123! .";
-            Assert.Equal(new char[] {'W', 'o', 'r', 'd', '1', '2', '3', '!', ' ', '.'}, StringUtilities.ToCharArray(s));
-        }
-
-        {
-
-        }
-
-        {
-
-        }
+        string s = "Word123! .";
+        char[] array = new char[] { 'W', 'o', 'r', 'd', '1', '2', '3', '!', ' ', '.' };
+        Assert.Equal(array, StringUtilities.ToCharArray(s));
+        Assert.Equal('C', StringUtilities.ToUpper('c'));
+        Assert.Equal("WORD123! .", StringUtilities.ToUpper(s));
+        Assert.Equal("word123! .", StringUtilities.ToLower(s));
+        Assert.Equal(10, StringUtilities.Length(s));
+        Assert.Equal("Word123! .", StringUtilities.ToStringArray(array));
+        Assert.Equal(". !321droW", StringUtilities.reverse(s));
+        Assert.Equal(1, StringUtilities.CountVowels(s));
+        Assert.Equal(3, StringUtilities.CountConsonants(s));
     }
 }

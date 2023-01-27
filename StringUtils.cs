@@ -353,9 +353,11 @@ public static class StringUtilities
     public static string reverse(string s)
     {
         char[] charArray = new char[s.Length];
-        for (int i = s.Length; i > 0; i--)
+        int j = 0;
+        for (int i = s.Length - 1; i >= 0; i--)
         {
-            charArray[i] = s[i];
+            charArray[i] = s[j];
+            j++;
         }
         s = ToStringArray(charArray);
         return s;
@@ -395,7 +397,8 @@ public static class StringUtilities
         int count = 0;
         for (int i = 0; i < s.Length; i++)
         {
-            if (s[i] != 'A' && s[i] != 'E' && s[i] != 'I' && s[i] != 'O' && s[i] != 'U')
+            if ((s[i] >= 'A' && s[i] <= 'Z') &&
+                (s[i] != 'A' && s[i] != 'E' && s[i] != 'I' && s[i] != 'O' && s[i] != 'U'))
             {
                 count++;
             }
