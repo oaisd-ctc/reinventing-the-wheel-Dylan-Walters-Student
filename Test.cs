@@ -2,6 +2,7 @@ using Xunit;
 using ArrayUtils;
 using MathUtils;
 using StringUtils;
+
 public class Tests
 {
 
@@ -249,7 +250,7 @@ public class Tests
         Assert.Equal("WoRd123! .", StringUtilities.ToAlternatingCase(s));
         Assert.Equal(" ", StringUtilities.OnlySpace(s));
         Assert.Equal("Word123!.", StringUtilities.RemoveWhiteSpace(s));
-        // Assert.Equal("", StringUtilities.RemoveWhiteSpace("         "));
+        Assert.Equal("", StringUtilities.RemoveWhiteSpace("         "));
 
     }
 }

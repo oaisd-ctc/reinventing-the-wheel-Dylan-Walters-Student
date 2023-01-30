@@ -1,1 +1,19 @@
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-f4981d0f882b2a3f0472912d15f9806d57e124e0fc890972558857b51b24a6f9.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=9794611)
+# Wheel 2: Electric Boogaloo
+## It's like your wheel, but better! Why? Because we said so!
+
+**What it is:** A package of rudimentary functions for use with arrays, strings, and for general mathematical purposes. Reimplements some of the functionality from derivatives of the System namespace, but adds a couple bells and whistles here and there.
+
+**Why:** Partially to demonstrate understanding of the inner workings of functions we use on a daily basis, that otherwise would have been paid no attention. Also, some of these are really useful to have. Appending to arrays, floor and ceiling operations for fractions, checking character cases, et cetera.
+
+**The how:** This library comes in 3 namespaces: `MathUtils`, `StringUtils`, and `ArrayUtils`. Simply include the namespace(s) of your choosing in a file. Next, to use a function, prefix it with `xUtilities`, where x is the desired type of function, followed by the actual function name. For instance:
+
+`string funnyJoke = StringUtilities.CaesarCipher("hdnozm wzzzzzvno!!!", 5);`
+
+`int[] Top10NumbersOfAllTime = ArrayUtilities.Append(Top9NumbersOfAllTime, 4);`
+
+`int ResultOfExtremelyImportantCalculation = MathUtilities.Add(2, 2);`
+
+It's that easy!
+
+
+**Documentation**
