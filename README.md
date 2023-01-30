@@ -16,4 +16,18 @@
 It's that easy!
 
 
-**Documentation**
+## Documentation
+
+**ArrayUtilities**
+
+`double Average(int[] nums)`
+Finds the average of an array of integers, where nums is the set of integers to return an average from.
+Throws a FormatException if the provided array has no elements.
+
+Overloads: float, double, decimal
+
+`int Max(int[] nums)`
+Finds the greatest integer in an array, where nums is the set of integers to return a maximum from.
+Throws a FormatException if the provided array has no elements.
+
+Overloads: float, double, decimal
