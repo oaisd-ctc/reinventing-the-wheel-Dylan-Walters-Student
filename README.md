@@ -18,7 +18,7 @@ It's that easy!
 
 ## Documentation
 
-**ArrayUtilities**
+### ArrayUtilities
 
 `double Average(int[] nums)`
 
@@ -176,6 +176,110 @@ Example: `ArrayUtilities.HowMany({3, 5, 7, 3}, 3)` returns 2
 
 Overloads: float, double, decimal
 
+
+### MathUtilities
+
+`int Power(int b, int e)`
+Finds the result of an integer raised to a power.
+Returns: b raised to the power of e.
+
+Example: `MathUtilities.Power(3, 5)` returns 243
+
+Overloads: float, double, decimal
+
+
+`double SquareRoot(int b)`
+Finds the square root of a number.
+
+Example: `MathUtilities.SquareRoot(3)` returns 1.73205080757
+
+Overloads: float, double, decimal
+
+`int AbsoluteValue(int x)`
+Finds the absolute value of a number.
+
+Example: `MathUtilities.AbsoluteValue(-5)` returns 5
+
+Overloads: float, double, decimal
+
+`int Min(int x, int y)`
+Finds the least of two integers.
+
+Example: `MathUtilities.Min(6, 9)` returns 6
+
+Overloads: float, double, decimal
+
+`int Max(int x, int y)`
+Finds the greatest of two integers.
+
+Example: `MathUtilities.Min(6, 9)` returns 9
+
+Overloads: float, double, decimal
+
+`int Add(int x, int y)`
+Calculates the sum of two decimals.
+
+Example: `MathUtilities.Add(9, 10)` returns 19
+
+Overloads: float, double, decimal
+
+`int Subtract(int x, int y)`
+Calculates the difference of two integers.
+
+Example: `MathUtilities.Subtract(9, 10)` returns -1
+
+Overloads: float, double, decimal
+
+`int Multiply(int x, int y)`
+Calculates the product of two doubles.
+
+Example: `MathUtilities.Multiply(9, 10)` returns 90
+
+Overloads: float, double, decimal
+
+`int Divide(int x, int y)`
+Calculates the quotient of two doubles.
+
+Example: `MathUtilities.Divide(9, 10)` returns 0
+
+Overloads: float, double, decimal
+
+`int Percentage(int value, int total)`
+Calculates the percentage of two numbers.
+returns: The percentage of total represented by value.
+
+Example: `MathUtilities.Percentage(9, 10)` returns 90
+
+Overloads: float, double, decimal
+
+`string Binary(int x)`
+Calculates the binary representation of an integer.
+returns: A string representing the number in binary.
+
+Example: `MathUtilities.Binary(9)` returns 1001
+
+No overloads
+
+`int Floor(double x)`
+Rounds down a provided value to the nearest integer.
+
+Example: `MathUtilities.Floor(100.2)` returns 100
+
+Overloads: float, double, decimal
+
+`int ceiling(double x)`
+Rounds up a provided value to the nearest integer.
+
+Example: `MathUtilities.ceiling(100.2)` returns 101
+
+Overloads: float, double, decimal
+
+`int round(double x)`
+Rounds a provided value to the nearest integer.
+
+Example: `MathUtilities.round(100.2)` returns 100
+
+Overloads: float, double, decimal
 
 
 ## Legal
