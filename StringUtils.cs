@@ -456,7 +456,7 @@ public static class StringUtilities
     }
     
     /// <summary>
-    /// Capitalizes a given character.
+    /// Determines if a character is uppercase.
     /// </summary>
     /// <param name="c">Character to turn uppercase.</param>
     /// <returns>

@@ -282,6 +282,65 @@ Example: `MathUtilities.round(100.2)` returns 100
 Overloads: float, double, decimal
 
 
+**StringUtilities**
+`string ToUpper(string s)`
+Changes each letter to be capitalized.
+Example: `StringUtilities.ToUpper('c')` returns 'C'
+
+Overloads: char
+
+`string ToLower(string s)`
+Changes each letter to be un-capitalized.
+Example: `StringUtilities.ToLower("word123! .")` returns "word123! ."
+
+`int Length(string s)`
+Finds length of a string.
+Example: `StringUtilities.Length("word123! .")` returns 10
+
+`char[] ToCharArray(string s)`
+Converts string to character array.
+Example: `StringUtilities.ToCharArray("Word123! .")` returns { 'W', 'o', 'r', 'd', '1', '2', '3', '!', ' ', '.' }
+
+`string ToStringArray(char[] characters)`
+Converts Char[] to a string.
+Example: `StringUtilities.ToStringArray({ 'W', 'o', 'r', 'd', '1', '2', '3', '!', ' ', '.' })` returns "Word123! ."
+
+`string reverse(string s)`
+Reverses string.
+Example: `StringUtilities.reverse(s)` returns ". !321droW"
+
+`int CountVowels(string s)`
+Counts the number of vowels in a string.
+Example: `StringUtilities.CountVowels("word123! .")` returns 1
+
+`int CountConsonants(string s)`
+Counts every non-vowel (consonant) in a string
+Example: `StringUtilities.CountConsonants("word123! .")` returns 3
+
+`bool HasLetter(string s, char c)`
+Finds specified letter in a given string.
+Example: `StringUtilities.HasLetter("word123! .", 'w')` returns true
+
+`string CaesarCipher(string s, int arrange)`
+Moves each letter through the alphabet by the given amount.
+Example: `StringUtilities.CaesarCipher("word123! .", 1)` returns "xpse123! ."
+
+`bool isUpper(char c)`
+Determines if a character is uppercase.
+Example: `StringUtilities.isUpper('c')` returns false
+
+`string ToAlternatingCase(string s)`
+Alternates each letter as capitalized and uncapitalized.
+Example: `StringUtilities.ToAlternatingCase("word123! .")` returns "WoRd123! ."
+
+`string OnlySpace(string s)`
+Takes out anything that is not a space/ whitespace.
+Example: `StringUtilities.OnlySpace("word123! .")` returns " "
+
+`string RemoveWhiteSpace(string s)`
+Removes any spaces from a string.
+Example: `StringUtilities.RemoveWhiteSpace("word123! .")` returns "Word123!."
+
 ## Legal
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
