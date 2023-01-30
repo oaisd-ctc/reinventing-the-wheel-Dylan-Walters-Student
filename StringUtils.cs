@@ -416,15 +416,17 @@ public static class StringUtilities
     /// </returns>
     public static bool HasLetter(string s, char c)
     {
-        bool hello = false;
-        foreach (char letter in s)
+        string str = ToUpper(s);
+        char character = ToUpper(c);
+        bool answer = false;
+        foreach (char letter in str)
         {
-            if (letter == c)
+            if (letter == character)
             {
-                hello = true;
+                answer = true;
             }
         }
-        return hello;
+        return answer;
     }
     
     /// <summary>
@@ -530,16 +532,17 @@ public static class StringUtilities
     /// </returns>
     public static string RemoveWhiteSpace(string s)
     {
-        char[] noSpace = new char[s.Length];
+        // char[] noSpace = new char[s.Length];
+        string noSpace = "";
         int i = 0;
         foreach (char letter in s)
         {
             if ((int)letter != 32)
             { 
-                noSpace[i] = letter;
+                noSpace += letter;
             }
             i++;
         }
-        return ToStringArray(noSpace);
+        return noSpace;
     }
 }

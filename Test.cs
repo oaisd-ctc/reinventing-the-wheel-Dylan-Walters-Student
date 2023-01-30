@@ -241,5 +241,15 @@ public class Tests
         Assert.Equal(". !321droW", StringUtilities.reverse(s));
         Assert.Equal(1, StringUtilities.CountVowels(s));
         Assert.Equal(3, StringUtilities.CountConsonants(s));
+        Assert.Equal(true, StringUtilities.HasLetter(s, 'w'));
+        Assert.Equal(false, StringUtilities.HasLetter(s, 'p'));
+        Assert.Equal("xpse123! .", StringUtilities.CaesarCipher(s, 1));
+        Assert.Equal(false, StringUtilities.isUpper('c'));
+        Assert.Equal(true, StringUtilities.isUpper('C'));
+        Assert.Equal("WoRd123! .", StringUtilities.ToAlternatingCase(s));
+        Assert.Equal(" ", StringUtilities.OnlySpace(s));
+        Assert.Equal("Word123!.", StringUtilities.RemoveWhiteSpace(s));
+        // Assert.Equal("", StringUtilities.RemoveWhiteSpace("         "));
+
     }
 }
